@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl http://akses.heyosam.me:81/sukirmanoke | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -14,7 +14,7 @@ exit 0
 fi
 clear
 echo " "
-echo "===========================================";
+echo "==========================================="; | lolcat
 echo " ";
 if [ -e "/root/log-limit.txt" ]; then
 echo "User Who Violate The Maximum Limit";
@@ -29,5 +29,5 @@ echo " "
 echo " The user-limit script not been executed."
 fi
 echo " ";
-echo "===========================================";
+echo "==========================================="; | lolcat
 echo " ";
