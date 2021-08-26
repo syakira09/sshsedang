@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -16,13 +16,13 @@ clear
 MYIP=$(wget -qO- ifconfig.me/ip);
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-echo -e "======================================"
+echo -e "======================================" | lolcat
 echo -e "Name : Change Port Openvpn"
-echo -e ""
+echo -e "======================================" | lolcat
 echo -e "     [1]  Change Port TCP $ovpn"
 echo -e "     [2]  Change Port UDP $ovpn2"
 echo -e "     [x]  Exit"
-echo -e "======================================"
+echo -e "======================================" | lolcat
 echo -e ""
 read -p "     Select From Options [1-2 or x] :  " prot
 echo -e ""
