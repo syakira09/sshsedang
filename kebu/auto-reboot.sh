@@ -6,7 +6,7 @@ bl='\e[36;1m'
 bd='\e[1m'
 MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl http://akses.heyosam.me:81/sukirmanoke | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -71,7 +71,7 @@ if [ ! -e /root/log-reboot.txt ]; then
 fi
 elif test $x -eq 9; then
 echo "" > /root/log-reboot.txt
-echo "Auto Reboot Log successfully deleted!"
+echo "Auto Reboot Log successfully deleted!" | lolcat
 else
 echo "Options Not Found In Menu"
 exit
