@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl http://akses.heyosam.me:81/sukirmanoke | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps?token=AVIBES7YTPMU2FJ4JTKHHYLBE55RS | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -13,11 +13,11 @@ echo "Only For Premium Users"
 exit 0
 fi
 apt install jq curl -y
-DOMAIN=sosohoha.my.id
+DOMAIN=ssha.xyz
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.sosohoha.my.id
-CF_ID=mr.tucoy@gmail.com
-CF_KEY=f0b3c4e271717732026130f0b9aa16f8a7883
+SUB_DOMAIN=${sub}.ssha.xyz
+CF_ID=admin@sshsedang.com
+CF_KEY=b6a15f71ddd2b9f8862b0170b0d61eb3cbdc4
 set -euo pipefail
 IP=$(wget -qO- ifconfig.me/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
