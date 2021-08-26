@@ -1,101 +1,98 @@
 #!/bin/bash
-# Debian 9 & 10 64bit
-# Ubuntu 18.04 & 20.04 bit
-# Centos 7 & 8 64bit 
-# By Sukirman
-# ==================================================
-
-
-# Check OS version
-if [[ -e /etc/debian_version ]]; then
-	source /etc/os-release
-	OS=$ID # debian or ubuntu
-elif [[ -e /etc/centos-release ]]; then
-	source /etc/os-release
-	OS=centos
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+MYIP=$(wget -qO- ifconfig.me/ip);
+echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps?token=AVIBESYXEVQJ22UELRCJTQLBE6CJS | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Permission Accepted...${NC}"
+else
+echo -e "${red}Permission Denied!${NC}";
+echo "Only For Premium Users"
+exit 0
 fi
-
-Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
-Info="${Green_font_prefix}[information]${Font_color_suffix}"
-
-if [[ -e /etc/wireguard/params ]]; then
-	echo -e "${Info} WireGuard sudah diinstal, silahkan ketik addwg untuk menambah client."
-	exit 1
-fi
-
-echo -e "${Info} Wireguard VPS AutoScript by Allah"
-# Detect public IPv4 address and pre-fill for the user
-
-# Detect public interface and pre-fill for the user
-SERVER_PUB_NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
-
-# Install WireGuard tools and module
-	if [[ $OS == 'ubuntu' ]]; then
-	apt install -y wireguard
-elif [[ $OS == 'debian' ]]; then
-	echo "deb http://deb.debian.org/debian/ unstable main" >/etc/apt/sources.list.d/unstable.list
-	printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' >/etc/apt/preferences.d/limit-unstable
-	apt update
-	apt install -y wireguard-tools iptables iptables-persistent
-	apt install -y linux-headers-$(uname -r)
-elif [[ ${OS} == 'centos' ]]; then
-	curl -Lo /etc/yum.repos.d/wireguard.repo https://copr.fedorainfracloud.org/coprs/jdoss/wireguard/repo/epel-7/jdoss-wireguard-epel-7.repo
-	yum -y update
-	yum -y install wireguard-dkms wireguard-tools
-	fi
-apt install iptables iptables-persistent -y
-# Make sure the directory exists (this does not seem the be the case on fedora)
-mkdir /etc/wireguard >/dev/null 2>&1
-
-chmod 600 -R /etc/wireguard/
-
-SERVER_PRIV_KEY=$(wg genkey)
-SERVER_PUB_KEY=$(echo "$SERVER_PRIV_KEY" | wg pubkey)
-
-# Save WireGuard settings
-echo "SERVER_PUB_NIC=$SERVER_PUB_NIC
-SERVER_WG_NIC=wg0
-SERVER_WG_IPV4=10.66.66.1
-SERVER_PORT=7070
-SERVER_PRIV_KEY=$SERVER_PRIV_KEY
-SERVER_PUB_KEY=$SERVER_PUB_KEY" >/etc/wireguard/params
-
+clear
+# Load params
 source /etc/wireguard/params
+source /var/lib/premium-script/ipvps.conf
+if [[ "$IP" = "" ]]; then
+SERVER_PUB_IP=$(wget -qO- ifconfig.me/ip);
+else
+SERVER_PUB_IP=$IP
+fi
+	echo "Name : Create Wireguard Account" | lolcat
+	echo ""
+	echo "Tell me a name for the client."
+	echo "Use one word only, no special characters."
 
-# Add server interface
-echo "[Interface]
-Address = $SERVER_WG_IPV4/24
-ListenPort = $SERVER_PORT
-PrivateKey = $SERVER_PRIV_KEY
-PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o $SERVER_PUB_NIC -j MASQUERADE;
-PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o $SERVER_PUB_NIC -j MASQUERADE;" >>"/etc/wireguard/wg0.conf"
+	until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+		read -rp "Client name: " -e CLIENT_NAME
+		CLIENT_EXISTS=$(grep -w $CLIENT_NAME /etc/wireguard/wg0.conf | wc -l)
 
-iptables -t nat -I POSTROUTING -s 10.66.66.1/24 -o $SERVER_PUB_NIC -j MASQUERADE
-iptables -I INPUT 1 -i wg0 -j ACCEPT
-iptables -I FORWARD 1 -i $SERVER_PUB_NIC -o wg0 -j ACCEPT
-iptables -I FORWARD 1 -i wg0 -o $SERVER_PUB_NIC -j ACCEPT
-iptables -I INPUT 1 -i $SERVER_PUB_NIC -p udp --dport 7070 -j ACCEPT
-iptables-save > /etc/iptables.up.rules
-iptables-restore -t < /etc/iptables.up.rules
-netfilter-persistent save
-netfilter-persistent reload
+		if [[ ${CLIENT_EXISTS} == '1' ]]; then
+			echo ""
+			echo "A client with the specified name was already created, please choose another name."
+			exit 1
+		fi
+	done
 
-systemctl start "wg-quick@wg0"
-systemctl enable "wg-quick@wg0"
+	echo "IPv4 Detected"
+	ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
+	WG_CONFIG="/etc/wireguard/wg0.conf"
+	LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 | cut -d "." -f 4 )
+	if [[ "$LASTIP" = "" ]]; then
+	CLIENT_ADDRESS="10.66.66.2"
+	else
+	CLIENT_ADDRESS="10.66.66.$((LASTIP+1))"
+	fi
 
-# Check if WireGuard is running
-systemctl is-active --quiet "wg-quick@wg0"
-WG_RUNNING=$?
+	# Adguard DNS by default
+	CLIENT_DNS_1="176.103.130.130"
 
-# Tambahan
-cd /usr/bin
-wget -O add-wg "https://raw.githubusercontent.com/hesoyam-oke/project/main/add-wg.sh"
-wget -O del-wg "https://raw.githubusercontent.com/hesoyam-oke/project/main/del-wg.sh"
-wget -O cek-wg "https://raw.githubusercontent.com/hesoyam-oke/project/main/cek-wg.sh"
-wget -O renew-wg "https://raw.githubusercontent.com/hesoyam-oke/project/main/renew-wg.sh"
-chmod +x add-wg
-chmod +x del-wg
-chmod +x cek-wg
-chmod +x renew-wg
-cd
-rm -f /root/wg.sh
+	CLIENT_DNS_2="176.103.130.131"
+	MYIP=$(wget -qO- ifconfig.me/ip);
+	read -p "Expired (days): " masaaktif
+	exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+
+	# Generate key pair for the client
+	CLIENT_PRIV_KEY=$(wg genkey)
+	CLIENT_PUB_KEY=$(echo "$CLIENT_PRIV_KEY" | wg pubkey)
+	CLIENT_PRE_SHARED_KEY=$(wg genpsk)
+
+	# Create client file and add the server as a peer
+	echo "[Interface]
+PrivateKey = $CLIENT_PRIV_KEY
+Address = $CLIENT_ADDRESS/24
+DNS = $CLIENT_DNS_1,$CLIENT_DNS_2
+
+[Peer]
+PublicKey = $SERVER_PUB_KEY
+PresharedKey = $CLIENT_PRE_SHARED_KEY
+Endpoint = $ENDPOINT
+AllowedIPs = 0.0.0.0/0,::/0" >>"$HOME/$SERVER_WG_NIC-client-$CLIENT_NAME.conf"
+
+	# Add the client as a peer to the server
+	echo -e "### Client $CLIENT_NAME $exp
+[Peer]
+PublicKey = $CLIENT_PUB_KEY
+PresharedKey = $CLIENT_PRE_SHARED_KEY
+AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
+	systemctl restart "wg-quick@$SERVER_WG_NIC"
+	cp $HOME/$SERVER_WG_NIC-client-$CLIENT_NAME.conf /home/vps/public_html/$CLIENT_NAME.conf
+	clear
+	sleep 0.5
+	echo Generate PrivateKey
+	sleep 0.5
+	echo Generate PublicKey
+	sleep 0.5
+	echo Generate PresharedKey
+	clear
+	echo -e ""
+	echo -e "Name : Wireguard               " | lolcat
+	echo -e ""
+	echo -e "==============================="
+	echo -e "Wireguard	: http://$MYIP:81/$CLIENT_NAME.conf"
+	echo -e "==============================="
+	echo -e "Expired On      : $exp"
+	rm -f /root/wg0-client-$CLIENT_NAME.conf
