@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl http://akses.heyosam.me:81/sukirmanoke | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps?token=AVIBESYXEVQJ22UELRCJTQLBE6CJS | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -19,6 +19,8 @@ domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
+echo -e "Name : Create SSH & OpenVPN Account" | lolcat
+echo -e "=============================="
 read -p "Username : " Login
 read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
@@ -45,13 +47,13 @@ useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "Thank You For Using Our Services"
+echo -e "Thank You For Using Our Services" | lolcat
 echo -e "  SSH & OpenVPN Account Info"
-echo -e "=============================="
+echo -e "==============================" | lolcat
 echo -e "Username      : $Login "
 echo -e "Password      : $Pass"
 echo -e "Expired On    : $exp"
-echo -e "=============================="
+echo -e "==============================" | lolcat
 echo -e "ISP        : $ISP"
 echo -e "Host       : $IP"
 echo -e "Domain     : $domain"
@@ -63,13 +65,13 @@ echo -e "WS Non SSL   : 2082"
 echo -e "WS Ovpn      : 2086"
 echo -e "Port Squid  :$sqd"
 echo -e "badvpn       : 7100-7300"
-echo -e "=============================="
+echo -e "==============================" | lolcat
 echo -e "OpenVPN     : TCP $ovpn http://$IP:81/client-tcp-$ovpn.ovpn"
 echo -e "OpenVPN     : UDP $ovpn2 http://$IP:81/client-udp-$ovpn2.ovpn"
 echo -e "OpenVPN     : SSL 442 http://$IP:81/client-tcp-ssl.ovpn"
-echo -e "=============================="
+echo -e "==============================" | lolcat
 echo -e "[PAYLOAD SSH WS]"
 echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf][crlf]"
-echo -e "=============================="
-echo -e "   SCRIPT INSTALL SUKIRMAN"
-echo -e "=============================="
+echo -e "==============================" | lolcat
+echo -e "SCRIPT By SSH SEDANG"
+echo -e "==============================" | lolcat
