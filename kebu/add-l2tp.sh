@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -20,6 +20,8 @@ else
 PUBLIC_IP=$IP
 fi
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+                    echo "Name : Create Account L2TP"
+		    echo "==========================" | lolcat
 		read -rp "Username: " -e VPN_USER
 		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/premium-script/data-user-l2tp | wc -l)
 
@@ -49,11 +51,11 @@ chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-l2tp"
 cat <<EOF
 Name : L2TP/IPSEC PSK VPN
-================================
+echo "=============================" | lolcat
 Server IP    : $PUBLIC_IP
 IPsec PSK    : myvpn
 Username     : $VPN_USER
 Password     : $VPN_PASSWORD
 Expired ON   : $exp
-=================================
+echo "=============================" | lolcat
 EOF
