@@ -23,7 +23,7 @@ if [[ -e /etc/wireguard/params ]]; then
 	exit 1
 fi
 
-echo -e "${Info} Wireguard VPS AutoScript by Allah"
+echo -e "${Info} Wireguard VPS AutoScript by SSH SEDANG"
 # Detect public IPv4 address and pre-fill for the user
 
 # Detect public interface and pre-fill for the user
@@ -89,10 +89,10 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O add-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-wg.sh?token=AVIBES54NY2ULEIPPNJBIZTBE6C3W"
-wget -O del-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-wg.sh?token=AVIBES6236OBX2USITQIGELBE6D6E"
-wget -O cek-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-wg.sh?token=AVIBES2L4W7T4IYD4KKILS3BE6EFY"
-wget -O renew-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-wg.sh?token=AVIBES3DCUOXRSPQMQTUDSLBE6J3W"
+wget -O add-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-wg.sh"
 chmod +x add-wg
 chmod +x del-wg
 chmod +x cek-wg
