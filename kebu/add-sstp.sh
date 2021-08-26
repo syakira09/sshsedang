@@ -37,7 +37,7 @@ echo -e "### $user $exp">>"/var/lib/premium-script/data-user-sstp"
 clear
 cat <<EOF
 Name : SSTP VPN
-================================ 
+echo -e "============================" | lolcat
 
 Server IP     : $IP
 Username      : $user
@@ -45,5 +45,5 @@ Password      : $pass
 Port          : $sstp
 Cert          : http://$IP:81/server.crt
 Expired On    : $exp
-================================
+echo -e "============================" | lolcat
 EOF
