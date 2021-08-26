@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl http://akses.heyosam.me:81/sukirmanoke | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -78,7 +78,7 @@ systemctl restart v2ray@none
 service cron restart
 clear
 echo -e ""
-echo -e "==========-V2RAY/VMESS-=========="
+echo -e "==========-V2RAY/VMESS-==========" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "ISP            : $ISP"
@@ -89,9 +89,9 @@ echo -e "alterId        : 2"
 echo -e "Security       : auto"
 echo -e "network        : ws"
 echo -e "path           : /v2ray"
-echo -e "================================="
+echo -e "=================================" | lolcat
 echo -e "link TLS       : ${vmesslink1}"
-echo -e "================================="
+echo -e "=================================" | lolcat
 echo -e "link none TLS  : ${vmesslink2}"
-echo -e "================================="
+echo -e "=================================" | lolcat
 echo -e "Expired On     : $exp"
