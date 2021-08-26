@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -14,13 +14,13 @@ exit 0
 fi
 clear
 echo "-------------------------------";
-echo "Name : SS - OBFS User Login";
+echo "Name : SS - OBFS User Login"; | lolcat
 echo "-------------------------------";
 echo ""
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 x=1
 echo "-------------------------------";
-echo " User | TLS"
+echo " User | TLS" | lolcat
 echo "-------------------------------";
 for akun in "${data[@]}"
 do
@@ -39,7 +39,7 @@ data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 x=1
 echo ""
 echo "-------------------------------";
-echo " User |  HTTP"
+echo " User |  HTTP" | lolcat
 echo "-------------------------------";
 for akun in "${data[@]}"
 do
