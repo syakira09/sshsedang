@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
 echo "Checking VPS"
-IZIN=$( curl http://akses.heyosam.me:81/sukirmanoke | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -55,4 +55,4 @@ Thank You For Using Our Services" | mail -s "Backup Data" $email
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 echo "Done"
-echo "Please Check Your Email"
+echo "Please Check Your Email" | lolcat
