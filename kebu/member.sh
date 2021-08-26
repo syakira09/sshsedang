@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -13,9 +13,9 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
-echo "Name : List Member SSH & OpenVPN"
+echo "Name : List Member SSH & OpenVPN" | lolcat
 echo "---------------------------------------------------"
-echo "USERNAME          EXP DATE          STATUS"
+echo "USERNAME          EXP DATE          STATUS" | lolcat
 echo "---------------------------------------------------"
 while read expired
 do
@@ -33,5 +33,5 @@ fi
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo "---------------------------------------------------"
-echo "Account number: $JUMLAH user"
+echo "Account number: $JUMLAH user" | lolcat
 echo "---------------------------------------------------"
