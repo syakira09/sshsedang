@@ -5,15 +5,15 @@ OS=$ID
 ver=$VERSION_ID
 
 #Install_Packages
-echo "#############################################"
+echo "#############################################" | lolcat
 echo "Install Paket..."
 apt-get install --no-install-recommends build-essential autoconf libtool libssl-dev libpcre3-dev libev-dev asciidoc xmlto automake -y
 echo "Install Paket Selesai."
-echo "#############################################"
+echo "#############################################" | lolcat
 
 
 #Install_Shadowsocks_libev
-echo "#############################################"
+echo "#############################################" | lolcat
 echo "Install Shadowsocks-libev..."
 apt-get install software-properties-common -y
 if [[ $OS == 'ubuntu' ]]; then
@@ -33,10 +33,10 @@ apt -t buster-backports install simple-obfs -y
 fi
 fi
 echo "Install Shadowsocks-libev Selesai."
-echo "#############################################"
+echo "#############################################" | lolcat
 
 #Server konfigurasi
-echo "#############################################"
+echo "#############################################" | lolcat
 echo "Konfigurasi Server."
 cat > /etc/shadowsocks-libev/config.json <<END
 {   
@@ -50,17 +50,17 @@ cat > /etc/shadowsocks-libev/config.json <<END
     "mode":"tcp_and_udp",
 }
 END
-echo "#############################################"
+echo "#############################################" | lolcat
 
 #mulai ~shadowsocks-libev~ server
-echo "#############################################"
+echo "#############################################" | lolcat
 echo "mulai ss server"
 systemctl enable shadowsocks-libev.service
 systemctl start shadowsocks-libev.service
-echo "#############################################"
+echo "#############################################" | lolcat
 
 #buat client config
-echo "#############################################"
+echo "#############################################" | lolcat
 echo "buat config obfs"
 cat > /etc/shadowsocks-libev.json <<END
 {
@@ -77,21 +77,21 @@ cat > /etc/shadowsocks-libev.json <<END
 }
 END
 chmod +x /etc/shadowsocks-libev.json
-echo "#############################################"
+echo "#############################################" | lolcat
 
 echo -e "">>"/etc/shadowsocks-libev/akun.conf"
 
-echo "#############################################"
+echo "#############################################" | lolcat
 echo "Menambahkan Perintah Shadowsocks-libev"
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2443:3543 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
-wget -O add-ss "https://raw.githubusercontent.com/hesoyam-oke/project/main/add-ss.sh"
-wget -O del-ss "https://raw.githubusercontent.com/hesoyam-oke/project/main/del-ss.sh"
-wget -O cek-ss "https://raw.githubusercontent.com/hesoyam-oke/project/main/cek-ss.sh"
-wget -O renew-ss "https://raw.githubusercontent.com/hesoyam-oke/project/main/renew-ss.sh"
+wget -O add-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-ss.sh"
+wget -O del-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-ss.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-ss.sh"
+wget -O renew-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-ss.sh"
 chmod +x add-ss
 chmod +x del-ss
 chmod +x cek-ss
