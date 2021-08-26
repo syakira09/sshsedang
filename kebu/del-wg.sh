@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps?token=AVIBESYXEVQJ22UELRCJTQLBE6CJS | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -18,7 +18,7 @@ source /etc/wireguard/params
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name : Delete Wireguard Account"
+		echo "Name : Delete Wireguard Account" | lolcat
 		echo ""
 		echo "You have no existing clients!"
 		exit 1
@@ -26,7 +26,7 @@ source /etc/wireguard/params
 
 	clear
 	echo ""
-	echo "Name : Delete Wireguard Account"
+	echo "Name : Delete Wireguard Account" | lolcat
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
@@ -56,7 +56,7 @@ source /etc/wireguard/params
 	systemctl restart "wg-quick@$SERVER_WG_NIC"
 	service cron restart
 clear
-echo " Wireguard Account Deleted Successfully"
+echo " Wireguard Account Deleted Successfully" | lolcat
 echo " =========================="
 echo " Client Name : $user"
 echo " Expired  On : $exp"
