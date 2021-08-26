@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -16,19 +16,19 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/trojan/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
-		echo "Name : Delete Trojan Account"
+		echo "Name : Delete Trojan Account" | lolcat
 		echo ""
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	echo ""
-	echo "Name : Delete Trojan Account"
+	echo "Name : Delete Trojan Account" | lolcat
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
 	echo ""
-	echo " ==============================="
+	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/etc/trojan/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -48,7 +48,7 @@ service cron restart
 clear
 clear
 echo " Trojan Account Deleted Successfully"
-echo " =========================="
+echo " ==========================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " ==========================" | lolcat
