@@ -14,20 +14,20 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=sosohoha.my.id
-organizationalunit=sosohoha.my.id
-commonname=sosohoha.my.id
-email=admin@sosohoha.my.id
+organization=sshsedang.my.id
+organizationalunit=sshsedang.my.id
+commonname=sshsedang.my.id
+email=admin@sshsedang.my.id
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/hesoyam-oke/project/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
 cd
 
 # Edu OVPN
-wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/hesoyam-oke/project/main/edu-ovpn.py
+wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/edu-ovpn.py
 chmod +x /usr/local/bin/edu-ovpn
 
 # Installing Service
@@ -55,7 +55,7 @@ systemctl enable edu-ovpn
 systemctl restart edu-ovpn
 
 #edussh
-wget -q -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/hesoyam-oke/project/main/dropbear-ws.py
+wget -q -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/dropbear-ws.py
 chmod +x /usr/local/bin/ws-dropbear
 
 # Installing Service
@@ -83,14 +83,14 @@ systemctl enable ws-dropbear
 systemctl restart ws-dropbear
 
 #edusshssl
-wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/hesoyam-oke/project/main/ws-stunnel
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ws-stunnel
 chmod +x /usr/local/bin/ws-stunnel
 
 # Installing Service
 cat > /etc/systemd/system/ws-stunnel.service << END
 [Unit]
-Description=Python Edu Ssl Proxy By Sukirman
-Documentation=https://sosohoha.my.id
+Description=Python Edu Ssl Proxy By SSH SEDANG
+Documentation=https://sshsedang.my.id
 After=network.target nss-lookup.target
 
 [Service]
@@ -176,15 +176,15 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/hesoyam-oke/project/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<h1><center>AutoScriptVPS By Sukirman</center></h1>" > /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/hesoyam-oke/project/main/vps.conf"
+echo "<h1><center>AutoScriptVPS By SSH SEDANG</center></h1>" > /home/vps/public_html/index.html
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -214,7 +214,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/hesoyam-oke/project/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -307,7 +307,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/hesoyam-oke/project/main/banner.conf"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -336,53 +336,53 @@ apt -y install dos2unix
 
 # download script
 cd /usr/bin
-wget -O menu "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/menu.sh"
-wget -O l2tp "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/l2tp.sh"
-wget -O ssh "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/ssh.sh"
-wget -O ssssr "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/ssssr.sh"
-wget -O sstpp "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/sstpp.sh"
-wget -O trojaan "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/trojaan.sh"
-wget -O trojanGO "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/trojanGO.sh"
-wget -O v2raay "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/v2raay.sh"
-wget -O wgr "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/wgr.sh"
-wget -O vleess "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/vleess.sh"
-wget -O bbr "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/bbr.sh"
-wget -O bannerku "https://raw.githubusercontent.com/hesoyam-oke/gasken/main/bannerku"
-wget -O add-host "https://raw.githubusercontent.com/hesoyam-oke/project/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/hesoyam-oke/project/main/about.sh"
-wget -O usernew "https://raw.githubusercontent.com/hesoyam-oke/project/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/hesoyam-oke/project/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/hesoyam-oke/project/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/hesoyam-oke/project/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/hesoyam-oke/project/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/hesoyam-oke/project/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/hesoyam-oke/project/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/hesoyam-oke/project/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/hesoyam-oke/project/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/hesoyam-oke/project/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/hesoyam-oke/project/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/hesoyam-oke/project/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/hesoyam-oke/project/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/hesoyam-oke/project/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/hesoyam-oke/project/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/hesoyam-oke/project/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/hesoyam-oke/project/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/hesoyam-oke/project/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/hesoyam-oke/project/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/hesoyam-oke/project/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/hesoyam-oke/project/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/hesoyam-oke/project/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/hesoyam-oke/project/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/hesoyam-oke/project/main/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/hesoyam-oke/project/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/hesoyam-oke/project/main/xp.sh"
-wget -O swap "https://raw.githubusercontent.com/hesoyam-oke/project/main/swapkvm.sh"
-wget -O /usr/bin/user-limit https://raw.githubusercontent.com/hesoyam-oke/project/main/user-limit.sh && chmod +x /usr/bin/user-limit
-wget -O auto-reboot "https://raw.githubusercontent.com/hesoyam-oke/project/main/auto-reboot.sh"
-wget -O running "https://raw.githubusercontent.com/hesoyam-oke/project/main/running.sh"
-wget -O cfd "https://raw.githubusercontent.com/hesoyam-oke/project/main/cfd.sh"
-wget -O cff "https://raw.githubusercontent.com/hesoyam-oke/project/main/cff.sh"
-wget -O cfh "https://raw.githubusercontent.com/hesoyam-oke/project/main/cfh.sh"
+wget -O menu "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/menu.sh"
+wget -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/l2tp.sh"
+wget -O ssh "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/sstpp.sh"
+wget -O trojaan "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/trojaan.sh"
+wget -O trojanGO "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/trojanGO.sh"
+wget -O v2raay "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/v2raay.sh"
+wget -O wgr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/wgr.sh"
+wget -O vleess "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/vleess.sh"
+wget -O bbr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/bbr.sh"
+wget -O bannerku "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/bannerku"
+wget -O add-host "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/about.sh"
+wget -O usernew "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/member.sh"
+wget -O delete "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/info.sh"
+wget -O ram "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps"
+wget -O ceklim "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps"
+wget -O port-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/xp.sh"
+wget -O swap "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/swapkvm.sh"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/user-limit.sh && chmod +x /usr/bin/user-limit
+wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/auto-reboot.sh"
+wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/running.sh"
+wget -O cfd "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfd.sh"
+wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cff.sh"
+wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfh.sh"
 chmod +x menu
 chmod +x l2tp
 chmod +x ssh
