@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -14,7 +14,7 @@ exit 0
 fi
 clear
 echo -e ""
-echo -e "======================================"
+echo -e "======================================" | lolcat
 echo -e ""
 echo -e "Name : Restart Service"
 echo -e ""
@@ -30,7 +30,7 @@ echo -e "    [x] Exit"
 echo -e ""
 read -p "    Select From Options [1-8 or x] :  " Restart
 echo -e ""
-echo -e "======================================"
+echo -e "======================================" | lolcat
 sleep 1
 clear
 case $Restart in
@@ -50,7 +50,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
-                echo -e "          Service/s Restarted         "
+                echo -e "          Service/s Restarted         "  | lolcat
                 echo -e ""
                 echo -e "======================================"
                 exit
@@ -61,7 +61,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
-                echo -e "         SSH Service Restarted        "
+                echo -e "         SSH Service Restarted        " | lolcat
                 echo -e ""
                 echo -e "======================================"
                 exit
@@ -72,7 +72,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
-                echo -e "       Dropbear Service Restarted     "
+                echo -e "       Dropbear Service Restarted     " | lolcat
                 echo -e ""
                 echo -e "======================================"
                 exit
@@ -83,7 +83,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
-                echo -e "        Stunnel4 Service Restarted    "
+                echo -e "        Stunnel4 Service Restarted    " | lolcat
                 echo -e ""
                 echo -e "======================================"
                 exit
@@ -94,7 +94,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
-                echo -e "       OpenVPN Service Restarted      "
+                echo -e "       OpenVPN Service Restarted      " | lolcat
                 echo -e ""
                 echo -e "======================================"
                 exit
@@ -105,7 +105,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
-                echo -e "        Squid3 Service Restarted      "
+                echo -e "        Squid3 Service Restarted      " | lolcat
                 echo -e ""
                 echo -e "======================================"
                 exit
@@ -116,7 +116,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
-                echo -e "         Nginx Service Restarted      "
+                echo -e "         Nginx Service Restarted      " | lolcat
                 echo -e ""
                 echo -e "======================================"
                 exit
@@ -135,7 +135,7 @@ case $Restart in
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
-                echo -e "    Badvpn  Badvpn Service Restarted  "
+                echo -e "    Badvpn  Badvpn Service Restarted  " | lolcat
                 echo -e ""
                 echo -e "======================================"
                 exit
