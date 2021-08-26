@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps?token=AVIBESYXEVQJ22UELRCJTQLBE6CJS | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -16,6 +16,8 @@ clear
 IP=$(wget -qO- ifconfig.me/ip);
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+                 echo -e "Name : Create SSTP Account" | lolcat
+		 echo -e "==========================" | lolcat
 		read -rp "Usernew: " -e user
 		CLIENT_EXISTS=$(grep -w $user /var/lib/premium-script/data-user-sstp | wc -l)
 
@@ -34,9 +36,8 @@ EOF
 echo -e "### $user $exp">>"/var/lib/premium-script/data-user-sstp"
 clear
 cat <<EOF
-
-================================
 Name : SSTP VPN
+================================ 
 
 Server IP     : $IP
 Username      : $user
