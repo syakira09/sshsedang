@@ -122,7 +122,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/hesoyam-oke/project/main/ssrmu"
+	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ssrmu?token=AVIBES53FBPSBPQOBJB6BILBE6NTY"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
@@ -138,9 +138,9 @@ Save_iptables
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr https://raw.githubusercontent.com/hesoyam-oke/project/main/ssrmu.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/hesoyam-oke/project/main/add-ssr.sh && chmod +x /usr/bin/add-ssr
-wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/hesoyam-oke/project/main/del-ssr.sh && chmod +x /usr/bin/del-ssr
-wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/hesoyam-oke/project/main/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
+wget -O /usr/bin/ssr https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ssrmu.sh?token=AVIBES5K2I57V7IZG2XSSI3BE6NWK && chmod +x /usr/bin/ssr
+wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-ssr.sh?token=AVIBES672U35DHKEFYVSJCDBE6OLO && chmod +x /usr/bin/add-ssr
+wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-ssr.sh?token=AVIBESYZDDUC2A2QHICCPGDBE6O3O && chmod +x /usr/bin/del-ssr
+wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-ssr.sh?token=AVIBES5WMKLSHD3Y4GYPJELBE6PE2 && chmod +x /usr/bin/renew-ssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
