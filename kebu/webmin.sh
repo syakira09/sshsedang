@@ -26,9 +26,9 @@ sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 rm -f /root/jcameron-key.asc
 clear
 echo ""
-echo " Done Install Webmin"
+echo " Done Install Webmin" | lolcat
 echo " $IP:10000"
-echo " AutoScriptVPS By  RPJ WONOSOBO"
+echo " AutoScriptVPS By SSH SEDANG"
 }
 function restart () {
 echo " Restarting Webmin"
@@ -38,7 +38,7 @@ echo " Start Uninstall Webmin"
 clear
 echo ""
 echo " Done Restart Webmin"
-echo " AutoScriptVPS By  RPJ WONOSOBO"
+echo " AutoScriptVPS By SSH SEDANG" | lolcat
 }
 function uninstall () {
 echo " Removing Repositori Webmin"
@@ -51,7 +51,7 @@ apt autoremove --purge webmin -y > /dev/null 2>&1
 clear
 echo ""
 echo " Done Uninstall Webmin"
-echo " AutoScriptVPS By  RPJ WONOSOBO"
+echo " AutoScriptVPS By SSH SEDANG" | lolcat
 }
 if [[ "$cek" = "perl" ]]; then
 sts="${Info}"
@@ -60,13 +60,13 @@ sts="${Error}"
 fi
 clear
 echo -e " =============================="
-echo -e "           Webmin Menu         "
+echo -e "           Webmin Menu         " | lolcat
 echo -e " =============================="
 echo -e " Status $sts"
 echo -e "  1. Install Webmin"
 echo -e "  2. Restart Webmin"
 echo -e "  3. Uninstall Webmin"
-echo -e " AutoScriptVPS By  RPJ WONOSOBO"
+echo -e " AutoScriptVPS By SSH SEDANG" | lolcat
 echo -e " Press CTRL+C to return"
 read -rp " Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
@@ -77,6 +77,6 @@ elif [[ "$num" = "3" ]]; then
 uninstall
 else
 clear
-echo " You Entered The Wrong Number"
+echo " You Entered The Wrong Number" | lolcat
 menu
 fi
