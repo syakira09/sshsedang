@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -17,7 +17,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-l2tp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name :  Renew L2TP"
+		echo "Name :  Renew L2TP" | lolcat
 		echo ""
 		echo "You have no existing clients!"
 		exit 1
@@ -25,12 +25,12 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-l2tp")
 
 	clear
 	echo ""
-	echo "Name :  Renew L2TP"
+	echo "Name :  Renew L2TP" | lolcat
 	echo ""
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
 	echo ""
-	echo -e "==============================="
+	echo -e "===============================" | lolcat
 	grep -E "^### " "/var/lib/premium-script/data-user-l2tp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -52,7 +52,7 @@ sed -i "s/### $user $exp/### $user $exp4/g" /var/lib/premium-script/data-user-l2
 clear
 echo ""
 echo " L2TP Account Has Been Successfully Renewed"
-echo " =========================="
+echo " ==========================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " =========================="
+echo " ==========================" | lolcat
