@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -17,19 +17,19 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-pptp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
-		echo "Name : Delete PPTP Account"
+		echo "Name : Delete PPTP Account" | lolcat
 		echo ""
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	echo ""
-	echo " Name : Delete PPTP Account"
+	echo " Name : Delete PPTP Account" | lolcat
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
 	echo ""
-	echo " ==============================="
+	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/var/lib/premium-script/data-user-pptp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -49,7 +49,7 @@ sed -i "/^### $VPN_USER $exp/d" /var/lib/premium-script/data-user-pptp
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 clear
 echo " PPTP Account Has Been Successfully Deleted"
-echo " =========================="
+echo " ==========================" | lolcat
 echo " Client Name : $VPN_USER"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " ==========================" | lolcat
