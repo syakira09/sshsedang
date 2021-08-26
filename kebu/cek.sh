@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -27,7 +27,7 @@ data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo "Name : Dropbear User Login";
 echo "";
 echo "-------------------------------------";
-echo "ID  |  Username  |  IP Address";
+echo "ID  |  Username  |  IP Address"; | lolcat
 echo "-------------------------------------";
 cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
 for PID in "${data[@]}"
@@ -44,7 +44,7 @@ echo " "
 echo "Name : OpenSSH User Login";
 echo "";
 echo "-------------------------------------";
-echo "ID  |  Username  |  IP Address";
+echo "ID  |  Username  |  IP Address"; | lolcat
 echo "-------------------------------------";
 cat $LOG | grep -i sshd | grep -i "Accepted password for" > /tmp/login-db.txt
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
@@ -64,7 +64,7 @@ if [ -f "/etc/openvpn/server/openvpn-tcp.log" ]; then
                 echo "Nama : OpenVPN TCP User Login";
         echo "";
         echo "-------------------------------------";
-        echo "Username  |  IP Address  |  Connected Since";
+        echo "Username  |  IP Address  |  Connected Since"; | lolcat
         echo "-------------------------------------";
         cat /etc/openvpn/server/openvpn-tcp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-tcp.txt
         cat /tmp/vpn-login-tcp.txt
@@ -76,7 +76,7 @@ if [ -f "/etc/openvpn/server/openvpn-udp.log" ]; then
                 echo "Name : OpenVPN UDP User Login";
         echo "";
         echo "-------------------------------------";
-        echo "Username  |  IP Address  |  Connected Since";
+        echo "Username  |  IP Address  |  Connected Since";  | lolcat
         echo "-------------------------------------";
         cat /etc/openvpn/server/openvpn-udp.log | grep -w "^CLIENT_LIST" | cut -d ',' -f 2,3,8 | sed -e 's/,/      /g' > /tmp/vpn-login-udp.txt
         cat /tmp/vpn-login-udp.txt
