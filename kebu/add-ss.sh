@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/gaspoll/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -89,15 +89,15 @@ service cron restart
 clear
 	echo -e ""
 	echo -e "Name : Shadowsocks"
-	echo -e ""
+	echo -e "===========================" | lolcat
 	echo -e "IP/Host        : $IP"
 	echo -e "Port OBFS TLS  : $tls"
 	echo -e "Port OBFS HTTP : $http"
 	echo -e "Password       : $user"
 	echo -e "Method         : aes-256-cfb"
 	echo -e "Expired On     : $exp"
-	echo -e "==========================="
+	echo -e "===========================" | lolcat
 	echo -e "Link OBFS TLS  : $linkss1"
-	echo -e "==========================="
+	echo -e "===========================" | lolcat
 	echo -e "Link OBFS HTTP : $linkss2"
-	echo -e "==========================="
+	echo -e "===========================" | lolcat
