@@ -15,7 +15,7 @@ fi
 echo -n > /tmp/other.txt
 data=( `cat /etc/v2ray/vless.json | grep '^###' | cut -d ' ' -f 2`);
 echo "-------------------------------";
-echo "Name : Vless User Login"; | lolcat
+echo "Name : Vless User Login";
 echo "-------------------------------";
 for akun in "${data[@]}"
 do
