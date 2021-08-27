@@ -175,10 +175,10 @@ cfd
 30)
 cfh
 ;;
-30)
+31)
 nano /etc/issue.net
 ;;
-30)
+32)
 update
 ;;
 x)
