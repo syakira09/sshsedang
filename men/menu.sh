@@ -16,6 +16,7 @@ echo -e "${green}Permission Accepted...${NC}"
 else
 echo -e "${red}Permission Denied!${NC}";
 echo "Only For Premium Users"
+echo "Contact : wa.me/6282311190332"
 exit 0
 fi
 clear 
