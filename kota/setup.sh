@@ -43,7 +43,7 @@ wget https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ins-vt.sh 
 wget https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #install trojan-go
-wget https://raw.githubusercontent.com/halluboys/xzvnct/main/update/ins-trojango.sh && dos2unix ins-trojango.sh && chmod +x ins-trojango.sh && ./ins-trojango.sh
+wget https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/ins-trojango.sh && dos2unix ins-trojango.sh && chmod +x ins-trojango.sh && ./ins-trojango.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -120,13 +120,13 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "=============================-[ AUTOSCRIPT PREMIUM ]-===========================" | tee -a log-install.txt
-echo -e "             =================================================" | tee -a log-install.txt
-echo -e "#                     Rebuild By : SSH SEDANG NETWORK                  #" | tee -a log-install.txt
-echo -e "#                      Contact    : t.me/sshsedang4                    #" | tee -a log-install.txt
-echo -e "#                        Whatsapp   : 082311190332                     #" | tee -a log-install.txt
-echo -e "             =================================================" | tee -a log-install.txt
-echo "===========================-[ BY SSH SEDANG NETWORK ]-==========================" | tee -a log-install.txt
+echo "==========================-[ AUTOSCRIPT PREMIUM ]-===========================" | tee -a log-install.txt
+echo -e "          =================================================" | tee -a log-install.txt
+echo -e "                   Rebuild By : SSH SEDANG NETWORK                  #" | tee -a log-install.txt
+echo -e "#                   Contact    : t.me/sshsedang4                    #" | tee -a log-install.txt
+echo -e "#                     Whatsapp   : 082311190332                     #" | tee -a log-install.txt
+echo -e "          =================================================" | tee -a log-install.txt
+echo "========================-[ BY SSH SEDANG NETWORK ]-==========================" | tee -a log-install.txt
 echo ""
 echo " Reboot 10 Sec"
 sleep 10
