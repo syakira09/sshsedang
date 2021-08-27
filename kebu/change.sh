@@ -14,6 +14,7 @@ echo -e "     [5]  Change Port Vless" | lolcat
 echo -e "     [6]  Change Port Trojan" | lolcat
 echo -e "     [7]  Change Port Squid" | lolcat
 echo -e "     [8]  Change Port SSTP" | lolcat
+echo -e "     [9]  Change Port Trojan Go" | lolcat
 echo -e "     [x]  Exit"| lolcat
 echo -e "======================================" | lolcat
 echo -e ""
@@ -43,6 +44,9 @@ port-squid
 ;;
 8)
 port-sstp
+;;
+8)
+port-trgo
 ;;
 x)
 clear
