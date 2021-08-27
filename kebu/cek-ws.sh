@@ -16,7 +16,7 @@ clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/v2ray/config.json | grep '^###' | cut -d ' ' -f 2`);
 echo "-------------------------------";
-echo "Name : Vmess User Login"; | lolcat
+echo "Name : Vmess User Login";
 echo "-------------------------------";
 for akun in "${data[@]}"
 do
