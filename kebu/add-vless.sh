@@ -46,9 +46,8 @@ systemctl restart v2ray@vless
 systemctl restart v2ray@vnone
 clear
 echo -e ""
+echo -e "Name : V2RAY/VLESS "
 echo -e "=================================" | lolcat
-echo -e "Name : V2RAY/VLESS               "
-echo -e ""
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "port TLS       : $tls"
