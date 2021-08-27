@@ -121,6 +121,11 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "=============================-[ AUTOSCRIPT PREMIUM ]-===========================" | tee -a log-install.txt
+echo -e "             =================================================" | tee -a log-install.txt
+echo -e "#                     Rebuild By : SSH SEDANG NETWORK                  #" | tee -a log-install.txt
+echo -e "#                      Contact    : t.me/sshsedang4                    #" | tee -a log-install.txt
+echo -e "#                        Whatsapp   : 082311190332                     #" | tee -a log-install.txt
+echo -e "             =================================================" | tee -a log-install.txt
 echo "===========================-[ BY SSH SEDANG NETWORK ]-==========================" | tee -a log-install.txt
 echo ""
 echo " Reboot 10 Sec"
