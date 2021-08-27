@@ -379,7 +379,7 @@ wget -O xp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/xp.
 wget -O swap "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/swapkvm.sh"
 wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/user-limit.sh && chmod +x /usr/bin/user-limit
 wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/auto-reboot.sh"
-wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/running.sh"
+wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/running.sh"
 wget -O cfd "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfh.sh"
