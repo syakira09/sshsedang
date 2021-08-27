@@ -15,6 +15,8 @@ echo -e "# My Family                                     #" | lolcat
 echo -e "# Google                                        #" | lolcat
 echo -e "# Admin Portal & White Vps                      #" | lolcat
 echo -e "# Tuan YZ                                       #" | lolcat
+echo -e "# Adisubagja                                    #" | lolcat
+echo -e "# Demonk                                        #" | lolcat
 echo -e "#                                               #" | lolcat
 echo -e "#-----------------------------------------------#" | lolcat
 echo -e "# Rebuild By : SSH SEDANG NETWORK               #" | lolcat
