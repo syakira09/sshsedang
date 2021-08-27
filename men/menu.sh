@@ -75,7 +75,9 @@ echo -e   " $bl ║\e[m$bd 26$bl]\e[m$bd Clear Log"
 echo -e   " $bl ║\e[m$bd 27$bl]\e[m$bd Restart All Service"
 echo -e   " $bl ║\e[m$bd 28$bl]\e[m$bd Add ID Cloudflare"
 echo -e   " $bl ║\e[m$bd 29$bl]\e[m$bd Cloudflare Add-Ons" 
-echo -e   " $bl ║\e[m$bd 30$bl]\e[m$bd Pointing BUG                                           ╥"
+echo -e   " $bl ║\e[m$bd 30$bl]\e[m$bd Pointing BUG"
+echo -e   " $bl ║\e[m$bd 31$bl]\e[m$bd Change Banner"
+echo -e   " $bl ║\e[m$bd 32$bl]\e[m$bd Update To Last Version                                 ╥"
 echo -e   "  \e[1;32m╠════════════════════════════════════════════════════════════╣\e[m" | lolcat
 echo -e   "  ║ x)   Exit                                                  ║\e[m" | lolcat
 echo -e   "  \e[1;32m╚════════════════════════════════════════════════════════════╝\e[m" | lolcat
@@ -172,6 +174,12 @@ cfd
 ;;
 30)
 cfh
+;;
+30)
+nano /etc/issue.net
+;;
+30)
+update
 ;;
 x)
 exit
