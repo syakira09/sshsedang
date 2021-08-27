@@ -14,13 +14,13 @@ exit 0
 fi
 clear
 echo "-------------------------------";
-echo "Name : SS - OBFS User Login"; | lolcat
+echo "Name : SS - OBFS User Login";
 echo "-------------------------------";
 echo ""
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 x=1
 echo "-------------------------------";
-echo " User | TLS" | lolcat
+echo " User | TLS"
 echo "-------------------------------";
 for akun in "${data[@]}"
 do
@@ -39,7 +39,7 @@ data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 x=1
 echo ""
 echo "-------------------------------";
-echo " User |  HTTP" | lolcat
+echo " User |  HTTP"
 echo "-------------------------------";
 for akun in "${data[@]}"
 do
