@@ -33,7 +33,7 @@ chmod +x /usr/local/bin/edu-ovpn
 # Installing Service
 cat > /etc/systemd/system/edu-ovpn.service << END
 [Unit]
-Description=Python Edu Ovpn By Allah
+Description=Python Edu Ovpn By SSH SEDANG
 Documentation=https://sshsedang.my.id
 After=network.target nss-lookup.target
 
