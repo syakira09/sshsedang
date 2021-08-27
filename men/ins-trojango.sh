@@ -5,13 +5,13 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
-IZIN=$( curl https://raw.githubusercontent.com/halluboys/ipvps/main/ip | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
 echo -e "${red}Permission Denied!${NC}";
 echo "Please Contact Admin"
-echo "Telegram t.me/xzvnct"
+echo "Whatsapp : wa.me/6282311190332"
 echo "Waiting 5 Sec"
 rm -f setup.sh
 sleep 5
