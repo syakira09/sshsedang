@@ -27,7 +27,7 @@ data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo "Name : Dropbear User Login";
 echo "";
 echo "-------------------------------------";
-echo "ID  |  Username  |  IP Address"; | 
+echo "ID  |  Username  |  IP Address"; 
 echo "-------------------------------------";
 cat $LOG | grep -i dropbear | grep -i "Password auth succeeded" > /tmp/login-db.txt;
 for PID in "${data[@]}"
@@ -44,7 +44,7 @@ echo " "
 echo "Name : OpenSSH User Login";
 echo "";
 echo "-------------------------------------";
-echo "ID  |  Username  |  IP Address"; | 
+echo "ID  |  Username  |  IP Address"; 
 echo "-------------------------------------";
 cat $LOG | grep -i sshd | grep -i "Accepted password for" > /tmp/login-db.txt
 data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
