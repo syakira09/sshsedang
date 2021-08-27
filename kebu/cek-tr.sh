@@ -14,7 +14,7 @@ exit 0
 fi
 data=( `cat /var/log/trojan.log | grep -w 'authenticated as' | awk '{print $7}' | sort | uniq`);
 echo "-------------------------------";
-echo "Nama : Trojan User Login"; | lolcat
+echo "Nama : Trojan User Login";
 echo "-------------------------------";
 for akun in "${data[@]}"
 do
