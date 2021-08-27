@@ -385,7 +385,7 @@ wget -O cfd "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cf
 wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfh.sh"
 wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/add-trgo.sh"
-wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/xp-trgo.sh
+wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/xp-trgo.sh"
 wget -O cek-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/cek-trgo.sh"
 wget -O renew-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/renew-trgo.sh"
 wget -O port-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/port-trgo.sh"
