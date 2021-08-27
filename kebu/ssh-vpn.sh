@@ -169,6 +169,7 @@ apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rs
 echo "clear" >> .profile
 echo "neofetch" >> .profile
 echo "echo Script Premium By SSH Sedang Network" >> .profile
+echo "echo Contact : wa.me/6282311190332" >> .profile
 echo "echo Silahkan Ketik Menu Untuk Melihat daftar Perintah" >> .profile
 
 # install webserver
