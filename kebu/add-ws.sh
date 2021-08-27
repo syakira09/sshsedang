@@ -23,6 +23,8 @@ ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+                echo -e "Name : Create V2RAY Account"
+		echo -e "===============================" | lolcat
 		read -rp "User: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/v2ray/config.json | wc -l)
 
