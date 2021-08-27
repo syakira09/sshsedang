@@ -380,6 +380,7 @@ wget -O swap "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/s
 wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/user-limit.sh && chmod +x /usr/bin/user-limit
 wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/auto-reboot.sh"
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/running.sh"
+wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/update.sh"
 wget -O cfd "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfh.sh"
@@ -432,6 +433,7 @@ chmod +x xp
 chmod +x swap
 chmod +x auto-reboot
 chmod +x running
+chmod +x update
 chmod +x cfd
 chmod +x cff
 chmod +x cfh
