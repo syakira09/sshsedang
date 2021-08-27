@@ -15,10 +15,10 @@ fi
 clear
 echo "Name : Renew SSH & Openvpn Account"
 echo "==================================" | lolcat
-read -p "         Username       :  " User
+read -p "Username       :  " User
 egrep "^$User" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
-read -p "         Day Extend     :  " Days
+read -p "Day Extend     :  " Days
 Today=`date +%s`
 Days_Detailed=$(( $Days * 86400 ))
 Expire_On=$(($Today + $Days_Detailed))
