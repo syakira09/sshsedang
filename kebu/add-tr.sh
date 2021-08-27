@@ -41,9 +41,8 @@ systemctl restart trojan
 trojanlink="trojan://${user}@${domain}:${tr}"
 clear
 echo -e ""
-echo -e "=================================" | lolcat
 echo -e "Name : Trojan"
-echo -e ""
+echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Host/IP        : ${domain}"
 echo -e "port           : ${tr}"
