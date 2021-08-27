@@ -22,6 +22,8 @@ domain=$IP
 fi
 trojango="$(cat ~/log-install.txt | grep -i TrojanGO | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
+                echo "Name : Create Trojan GO Account"
+		echo "=================================="
 		read -rp "Password : " -e user
 		user_EXISTS=$(grep -w $user /etc/trojan-go/akun.conf | wc -l)
 
