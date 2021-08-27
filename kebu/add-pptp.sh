@@ -46,12 +46,11 @@ chmod 600 /etc/ppp/chap-secrets*
 echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-pptp"
 cat <<EOF
 
-echo "==============================" | lolcat
 Name : PPTP VPN
-
+================================
 Server IP    : $PUBLIC_IP
 Username     : $VPN_USER
 Password     : $VPN_PASSWORD
 Expired On   : $exp
-echo "==============================" | lolcat
+================================
 EOF
