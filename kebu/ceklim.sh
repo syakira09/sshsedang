@@ -14,7 +14,7 @@ exit 0
 fi
 clear
 echo " "
-echo "==========================================="; | lolcat
+echo "===========================================";
 echo " ";
 if [ -e "/root/log-limit.txt" ]; then
 echo "User Who Violate The Maximum Limit";
@@ -29,5 +29,5 @@ echo " "
 echo " The user-limit script not been executed."
 fi
 echo " ";
-echo "==========================================="; | lolcat
+echo "===========================================";
 echo " ";
