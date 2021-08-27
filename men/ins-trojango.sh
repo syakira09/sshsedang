@@ -94,7 +94,7 @@ cat <<EOF > /etc/trojan-go/config.json
   },
   "websocket": {
     "enabled": true,
-    "path": "/xzvnct",
+    "path": "/trojango",
     "host": "$domain"
   },
   "shadowsocks": {
