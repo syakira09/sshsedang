@@ -280,6 +280,7 @@ wget -O /usr/bin/add-l2tp https://raw.githubusercontent.com/SSHSEDANG4/sshsedang
 wget -O /usr/bin/del-l2tp https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-l2tp.sh && chmod +x /usr/bin/del-l2tp
 wget -O /usr/bin/add-pptp https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-pptp.sh && chmod +x /usr/bin/add-pptp
 wget -O /usr/bin/del-pptp https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-pptp.sh && chmod +x /usr/bin/del-pptp
+wget -O /usr/bin/cek-pptp https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-pptp.sh && chmod +x /usr/bin/cek-pptp
 wget -O /usr/bin/renew-pptp https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-pptp.sh && chmod +x /usr/bin/renew-pptp
 wget -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-l2tp.sh && chmod +x /usr/bin/renew-l2tp
 touch /var/lib/premium-script/data-user-l2tp
