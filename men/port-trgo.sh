@@ -6,7 +6,9 @@ MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
 clear
 tr="$(cat ~/log-install.txt | grep -i Trojan-go | cut -d: -f2|sed 's/ //g')"
-echo -e "      Change Port $tr"
+echo -e "Name : Change Port Trojan GO"
+echo -e "============================" | lolcat
+echo -e "Change Port $tr"
 read -p "New Port Trojan-go: " tr2
 if [ -z $tr2 ]; then
 echo "Please Input Port"
