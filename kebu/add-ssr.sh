@@ -54,9 +54,9 @@ ssr_link="ssr://${tmp2}"
 /etc/init.d/ssrmu restart
 service cron restart
 IP=$(wget -qO- ifconfig.me/ip);
-clear && echo && echo "===================================================" && echo  | lolcat
-echo -e "Name : ShadowsocksR"
 echo -e ""
+echo -e "Name : ShadowsocksR"
+clear && echo && echo "===================================================" && echo  | lolcat
 echo -e " User [${ssr_user}] configuration info：" | lolcat
 echo -e " IP            : ${IP}"
 echo -e " Port          : ${ssr_port}"
