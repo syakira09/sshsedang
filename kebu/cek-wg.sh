@@ -6,7 +6,7 @@ hr(){
 }
 x=1
 echo "-------------------------------";
-echo "---=[ Wireguard User Login ]=---"; | lolcat
+echo "---=[ Wireguard User Login ]=---";
 echo "-------------------------------";
 echo "Name  Remote IP Virtual IP Bytes Received Bytes Sent Last Seen "
 for akun in "${data[@]}"
