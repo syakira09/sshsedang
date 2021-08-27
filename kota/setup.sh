@@ -102,7 +102,7 @@ echo "   - V2RAY Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - V2RAY Vless TLS         : 2083"  | tee -a log-install.txt
 echo "   - V2RAY Vless None TLS    : 8880"  | tee -a log-install.txt
 echo "   - Trojan                  : 2087"  | tee -a log-install.txt
-#echo "   - TrojanGO                : 2096"  | tee -a log-install.txt
+echo "   - TrojanGO                : 2096"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
@@ -120,7 +120,7 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "=============================-[ AUTOSCRIPT PREMIUM ]-===========================" | tee -a log-install.txt
-echo "========================-[ BY ANAK EMAK PALING GANTENG ]-=======================" | tee -a log-install.txt
+echo "===========================-[ BY SSH SEDANG NETWORK ]-==========================" | tee -a log-install.txt
 echo ""
 echo " Reboot 10 Sec"
 sleep 10
