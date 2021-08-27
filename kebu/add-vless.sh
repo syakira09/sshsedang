@@ -62,3 +62,5 @@ echo -e "=================================" | lolcat
 echo -e "link none TLS  : ${vlesslink2}"
 echo -e "=================================" | lolcat
 echo -e "Expired On     : $exp"
+echo -e "=================================" | lolcat
+echo -e "Script By SSH SEDANG NETWORK"
