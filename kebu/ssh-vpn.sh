@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+# Script By SSH SEDANG
 # ==================================================
 
 # initializing var
