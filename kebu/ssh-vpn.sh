@@ -383,6 +383,12 @@ wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/keb
 wget -O cfd "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfh.sh"
+wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/add-trgo.sh"
+wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/xp-trgo.sh
+wget -O cek-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/cek-trgo.sh"
+wget -O renew-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/renew-trgo.sh"
+wget -O port-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/port-trgo.sh"
+wget -O /usr/bin/del-trgo https://raw.githubusercontent.com/halluboys/xzvnct/main/update/del-trgo && chmod +x /usr/bin/del-trgo
 chmod +x menu
 chmod +x l2tp
 chmod +x ssh
@@ -429,6 +435,14 @@ chmod +x running
 chmod +x cfd
 chmod +x cff
 chmod +x cfh
+chmod +x add-trgo
+chmod +x xp-trgo
+chmod +x cek-trgo
+chmod +x renew-trgo
+chmod +x port-trgo
+dos2unix trojanGO
+dos2unix del-trgo
+
 echo "0 5 * * * root clear-log" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
