@@ -55,7 +55,6 @@ cd
 echo "1.2" > /home/ver
 clear
 echo " Fix minor Bugs"
-echo " Now You Can Change Port Of Some Services"
 echo " Reboot 5 Sec"
 sleep 5
 rm -f update.sh
