@@ -80,7 +80,8 @@ systemctl restart v2ray@none
 service cron restart
 clear
 echo -e ""
-echo -e "==========-V2RAY/VMESS-==========" | lolcat
+echo -e "Name : V2RAY/VMESS"
+echo -e "=================================" | lolcat
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "ISP            : $ISP"
