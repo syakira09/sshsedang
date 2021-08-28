@@ -25,6 +25,7 @@ echo -e "     [2]  AutoKill After 10 Minutes"
 echo -e "     [3]  AutoKill After 15 Minutes"
 echo -e "     [4]  Turn Off AutoKill/MultiLogin"
 echo -e "     [x]  Exit"
+
 echo -e "======================================" | lolcat                                                                                                          
 echo -e ""
 read -p "     Select From Options [1-4 or x] :  " AutoKill
