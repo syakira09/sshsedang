@@ -10,14 +10,12 @@ fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
-MYIP=$(wget -qO- ifconfig.co);
-versi=$(cat /home/ver)
-if [[ $versi == 1.2 ]]; then
-echo "You Have The Latest Version"
-exit 0
-fi
+MYIP=$(wget -qO- ifconfig.me/ip);
+clear
 echo "Start Update"
+# update
 cd /usr/bin
+
 wget -O menu "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/menu.sh"
 wget -O l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/l2tp.sh"
 wget -O ssh "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/ssh.sh"
@@ -189,11 +187,6 @@ chmod +x renew-wg
 
 sed -i -e 's/\r$//' add-l2tp
 
-echo "0 5 * * * root clear-log && reboot" > /etc/crontab
-echo "0 0 * * * root xp" > /etc/crontab
-cd
-echo "1.2" > /home/ver
-clear
 echo " Successfully Update :"
 echo " - Fix minor Bugs"
 echo " Reboot 5 Sec"
