@@ -53,4 +53,5 @@ Username     : $VPN_USER
 Password     : $VPN_PASSWORD
 Expired On   : $exp
 ================================
+Script By SSH SEDANG NETWORK
 EOF
