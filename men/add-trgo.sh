@@ -40,7 +40,8 @@ echo -e "### $user $exp" >> /etc/trojan-go/akun.conf
 systemctl restart trojan-go.service
 trojangolink="trojan-go://${uuid}@${domain}:${trojango}/?sni=${domain}&type=ws&host=${domain}&path=/trojango&encryption=none#${user}"
 clear
-echo -e "=======[TROJAN-GO-ACCOUNT]=========" | lolcat
+echo -e "Name : Trojan-GO" | lolcat
+echo -e "===================================" | lolcat
 echo -e "Remarks    = ${user}"
 echo -e "IP / Host  = ${domain}"
 echo -e "Port       = ${trojango}"
@@ -49,3 +50,4 @@ echo -e "Expired    = $exp"
 echo -e "===================================" | lolcat
 echo -e "Link TROJAN-GO : ${trojangolink}"
 echo -e "===================================" | lolcat
+echo -e "Script By SSH SEDANG NETWORK" 
