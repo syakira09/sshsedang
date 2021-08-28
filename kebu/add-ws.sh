@@ -93,8 +93,8 @@ echo -e "Security       : auto"
 echo -e "network        : ws"
 echo -e "path           : /v2ray"
 echo -e "=================================" | lolcat
-echo -e "link TLS       : ${vmesslink1}"
+echo -e "Link TLS       : ${vmesslink1}"
 echo -e "=================================" | lolcat
-echo -e "link none TLS  : ${vmesslink2}"
+echo -e "Link None TLS  : ${vmesslink2}"
 echo -e "=================================" | lolcat
 echo -e "Expired On     : $exp"
