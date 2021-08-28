@@ -47,8 +47,7 @@ useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "Thank You For Using Our Services" | lolcat
-echo -e "  SSH & OpenVPN Account Info"
+echo -e "Name : SSH , WebSocket , OpenVPN"
 echo -e "==============================" | lolcat
 echo -e "Username      : $Login "
 echo -e "Password      : $Pass"
