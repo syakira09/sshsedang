@@ -103,3 +103,4 @@ clear
 	echo -e "===========================" | lolcat
 	echo -e "Link OBFS HTTP : $linkss2"
 	echo -e "===========================" | lolcat
+        echo -e "Script By SSH SEDANG NETWORK"
