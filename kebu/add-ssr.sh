@@ -69,3 +69,4 @@ echo -e " Expired On    : ${exp} "
 echo -e " ===================================================" | lolcat
 echo -e " Link SSR      : ${ssr_link}"
 echo -e " ===================================================" | lolcat
+echo -e " Script By SSH SEDANG NETWORK"
