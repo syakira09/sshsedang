@@ -59,19 +59,50 @@ wget -O port-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/
 wget -O wbmn "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/xp.sh"
 wget -O swap "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/swapkvm.sh"
-wget -O /usr/bin/user-limit https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/user-limit.sh && chmod +x /usr/bin/user-limit
+wget -O user-limit "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/user-limit.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/auto-reboot.sh"
 wget -O running "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/running.sh"
 wget -O update "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/update.sh"
 wget -O cfd "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cfh.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/add-trgo.sh"
-wget -O xp-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/xp-trgo.sh
-wget -O cek-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/cek-trgo.sh"
-wget -O renew-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/renew-trgo.sh"
+wget -O add-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/add-trgo.sh"
+wget -O xp-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/xp-trgo.sh"
+wget -O cek-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/cek-trgo.sh"
+wget -O renew-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/renew-trgo.sh"
 wget -O port-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/port-trgo.sh"
-wget -O /usr/bin/del-trgo https://raw.githubusercontent.com/halluboys/xzvnct/main/update/del-trgo && chmod +x /usr/bin/del-trgo
+wget -O del-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/del-trgo"
+wget -O add-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-ws.sh"
+wget -O renew-vless "tps://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-tr.shsh"
+wget -O add-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-l2tp.sh"
+wget -O del-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-l2tp.sh"
+wget -O add-pptp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-pptp.sh"
+wget -O del-pptp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-pptp.sh"
+wget -O cek-pptp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-pptp.sh"
+wget -O renew-pptp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-pptp.sh"
+wget -O renew-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-l2tp.sh"
+wget -O add-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-ss.sh"
+wget -O del-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-ss.sh"
+wget -O cek-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-ss.sh"
+wget -O renew-ss "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-ss.sh"
+wget -O add-ssr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-ssr.sh"
+wget -O del-ssr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-ssr.sh"
+wget -O renew-ssr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-ssr.sh"
+Wget -O add-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-wg.sh"
+wget -O del-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-wg.sh"
+wget -O cek-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-wg.sh"
+wget -O renew-wg "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-wg.sh"
+
 chmod +x menu
 chmod +x l2tp
 chmod +x ssh
@@ -124,14 +155,47 @@ chmod +x xp-trgo
 chmod +x cek-trgo
 chmod +x renew-trgo
 chmod +x port-trgo
-dos2unix trojanGO
-dos2unix del-trgo
+chmod +x del-trgo
+chmod +x add-ws
+chmod +x add-vless
+chmod +x add-tr
+chmod +x del-ws
+chmod +x del-vless
+chmod +x del-tr
+chmod +x cek-ws
+chmod +x cek-vless
+chmod +x cek-tr
+chmod +x renew-ws
+chmod +x renew-vless
+chmod +x renew-tr
+chmod +x add-l2tp
+chmod +x del-l2tp
+chmod +x add-pptp
+chmod +x del-pptp
+chmod +x cek-pptp
+chmod +x renew-pptp
+chmod +x renew-l2tp
+chmod +x add-ss
+chmod +x del-ss
+chmod +x cek-ss
+chmod +x renew-ss
+chmod +x add-ssr
+chmod +x del-ssr
+chmod +x renew-ssr
+chmod +x add-wg
+chmod +x del-wg
+chmod +x cek-wg
+chmod +x renew-wg
+
+sed -i -e 's/\r$//' add-l2tp
+
 echo "0 5 * * * root clear-log && reboot" > /etc/crontab
 echo "0 0 * * * root xp" > /etc/crontab
 cd
 echo "1.2" > /home/ver
 clear
-echo " Fix minor Bugs"
+echo " Successfully Update :"
+echo " - Fix minor Bugs"
 echo " Reboot 5 Sec"
 sleep 5
 rm -f update.sh
