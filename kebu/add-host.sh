@@ -36,4 +36,4 @@ systemctl start v2ray@none
 echo -e "[${GREEN}Done${NC}]"
 echo "Location Your Domain : /etc/v2ray/domain"
 echo ""
-echo -e "${RED}Autoscript By Sukirman${NC}"
+echo -e "${RED}Autoscript By SSH SEDANG NETWORK${NC}"
