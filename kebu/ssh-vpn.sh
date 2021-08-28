@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script By SSH SEDANG
+# Script By SSH SEDANG NETWORK
 # ==================================================
 
 # initializing var
@@ -179,7 +179,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<h1><center>AutoScriptVPS By SSH SEDANG</center></h1>" > /home/vps/public_html/index.html
+echo "<h1><center>AutoScriptVPS By SSH SEDANG NETWORK</center></h1>" > /home/vps/public_html/index.html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/vps.conf"
 /etc/init.d/nginx restart
 
