@@ -40,7 +40,7 @@ echo -e "### $user $exp" >> /etc/trojan-go/akun.conf
 systemctl restart trojan-go.service
 trojangolink="trojan-go://${uuid}@${domain}:${trojango}/?sni=${domain}&type=ws&host=${domain}&path=/trojango&encryption=none#${user}"
 clear
-echo -e "Name : Trojan-GO" | lolcat
+echo -e "Name : Trojan-GO" 
 echo -e "===================================" | lolcat
 echo -e "Remarks    = ${user}"
 echo -e "IP / Host  = ${domain}"
