@@ -57,9 +57,9 @@ echo -e "Encryption     : none"
 echo -e "network        : ws"
 echo -e "path           : /v2ray"
 echo -e "=================================" | lolcat
-echo -e "link TLS       : ${vlesslink1}"
+echo -e "Link TLS       : ${vlesslink1}"
 echo -e "=================================" | lolcat
-echo -e "link none TLS  : ${vlesslink2}"
+echo -e "Link None TLS  : ${vlesslink2}"
 echo -e "=================================" | lolcat
 echo -e "Expired On     : $exp"
 echo -e "=================================" | lolcat
