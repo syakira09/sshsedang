@@ -12,7 +12,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 clear
-echo "Starting Update ..."
+echo "Starting Update ..." | lolcat
 # update
 cd /usr/bin
 
