@@ -50,3 +50,5 @@ echo -e "Key            : ${user}"
 echo -e "link           : ${trojanlink}"
 echo -e "=================================" | lolcat
 echo -e "Expired On     : $exp"
+echo -e "=================================" | lolcat
+echo -e "Script By SSH SEDANG NETWORK"
