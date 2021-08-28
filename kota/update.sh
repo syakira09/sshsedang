@@ -41,7 +41,7 @@ wget -O speedtest "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/k
 wget -O info "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/info.sh"
 wget -O ram "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/ipvps"
+wget -O autokill "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/tendang.sh"
 wget -O clear-log "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/clear-log.sh"
