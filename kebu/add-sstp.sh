@@ -46,4 +46,5 @@ Port          : $sstp
 Cert          : http://$IP:81/server.crt
 Expired On    : $exp
 =================================
+Script By SSH SEDANG NETWORK
 EOF
