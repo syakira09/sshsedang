@@ -18,7 +18,7 @@ clear
 echo -e ""
 echo -e "======================================" | lolcat
 echo -e ""
-echo -e "     Status Autokill $sts        "
+echo -e "     Status Autokill : $sts        "
 echo -e ""
 echo -e "     [1]  AutoKill After 5 Minutes"
 echo -e "     [2]  AutoKill After 10 Minutes"
