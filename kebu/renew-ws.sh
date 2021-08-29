@@ -17,19 +17,18 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/v2ray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name : Renew V2RAY Account" | lolcat
-		echo ""
+		echo "Name : Renew V2RAY Account"
+		echo "===========================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
-	echo "Name : Renew V2RAY Account" | lolcat
-	echo ""
+	echo "Name : Renew V2RAY Account" 
+	echo "===============================" | lolcat
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo ""
 	echo -e "===============================" | lolcat
 	grep -E "^### " "/etc/v2ray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -58,3 +57,4 @@ echo " ==========================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
 echo " ==========================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
