@@ -29,6 +29,8 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 	tram=$( free -m | awk 'NR==2 {print $2}' )
+	tram2=$( free -m | awk 'NR==4 {print $2}' )
+	tmemo=$( df -h /dev/sda | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
 
@@ -36,6 +38,8 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e " $bl ║ \e[032;1mNumber Of Cores:\e[0m$bd $cores"
 	echo -e " $bl ║ \e[032;1mCPU Frequency:\e[0m$bd $freq MHz"
 	echo -e " $bl ║ \e[032;1mTotal Amount Of RAM:\e[0m$bd $tram MB"
+	echo -e " $bl ║ \e[032;1mTotal Amount Of RAM Available:\e[0m$bd $tram2 MB"
+	echo -e " $bl ║ \e[032;1mTotal Amount Of Memory:\e[0m$bd $tram MB"
 	echo -e " $op ║ \e[032;1mSystem Uptime:\e[0m$bd $up"
 	echo -e " $op ║ \e[032;1mIsp Name:\e[0m$bd $ISP"
         echo -e " $op ║ \e[032;1mIp Vps:\e[0m$bd $IPVPS"
