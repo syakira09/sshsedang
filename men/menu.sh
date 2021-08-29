@@ -46,7 +46,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e " $op ║ \e[032;1mISP Name               :\e[0m$bd $ISP"
         echo -e " $op ║ \e[032;1mIP Vps                 :\e[0m$bd $IPVPS"
 	echo -e " $op ║ \e[032;1mCity                   :\e[0m$bd $CITY"
-	echo -e " $op ║ \e[032;1mTime                   :\e[0m$bd $WKT                   ╥"
+	echo -e " $op ║ \e[032;1mTime                   :\e[0m$bd $WKT                    ╥"
 echo -e  "  ╠════════════════════════════════════════════════════════════╣" | lolcat
 echo -e  "  ║                       ┃MENU OPTIONS┃                       ║ \e[m" |lolcat
 echo -e  "  ╠════════════════════════════════════════════════════════════╣" | lolcat
