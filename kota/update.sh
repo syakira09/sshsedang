@@ -79,7 +79,7 @@ wget -O cek-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu
 wget -O cek-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-vless.sh"
 wget -O cek-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek-tr.sh"
 wget -O renew-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-ws.sh"
-wget -O renew-vless "tps://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-vless.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-vless.sh"
 wget -O renew-tr "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew-tr.shsh"
 wget -O add-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/add-l2tp.sh"
 wget -O del-l2tp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/del-l2tp.sh"
