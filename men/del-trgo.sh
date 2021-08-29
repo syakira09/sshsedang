@@ -16,11 +16,15 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
+		echo "Name : Delete Trojan Go Account"
+		echo "===============================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	echo ""
+	echo " Name : Delete Trojan Go Account"
+        echo " ===============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
 	echo " ===============================" | lolcat
@@ -47,3 +51,4 @@ echo " ==========================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " ==========================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
