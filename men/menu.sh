@@ -43,7 +43,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e " $bl ║ \e[032;1mTotal Memory           :\e[0m$bd $tmemo2"
 	echo -e " $bl ║ \e[032;1mTotal Memory Available :\e[0m$bd $tmemo"
 	echo -e " $op ║ \e[032;1mSystem Uptime          :\e[0m$bd $up"
-	echo -e " $op ║ \e[032;1mIsp Name               :\e[0m$bd $ISP"
+	echo -e " $op ║ \e[032;1mISP Name               :\e[0m$bd $ISP"
         echo -e " $op ║ \e[032;1mIP Vps                 :\e[0m$bd $IPVPS"
 	echo -e " $op ║ \e[032;1mCity                   :\e[0m$bd $CITY"
 	echo -e " $op ║ \e[032;1mTime                   :\e[0m$bd $WKT                                       ╥"
