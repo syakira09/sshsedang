@@ -90,11 +90,11 @@ AllowedIPs = $CLIENT_ADDRESS/32" >>"/etc/wireguard/$SERVER_WG_NIC.conf"
 	echo Generate PresharedKey
 	clear
 	echo -e ""
-	echo -e "Name : Wireguard               " | lolcat
-	echo -e "==============================="
+	echo -e "Name : Wireguard               " 
+	echo -e "===============================" | lolcat
 	echo -e "Wireguard	: http://$MYIP:81/$CLIENT_NAME.conf"
-	echo -e "==============================="
+	echo -e "===============================" | lolcat
 	echo -e "Expired On      : $exp"
-	echo -e "==============================="
+	echo -e "===============================" | lolcat
 	echo -e "Script By SSH SEDANG NETWORK"
 	rm -f /root/wg0-client-$CLIENT_NAME.conf
