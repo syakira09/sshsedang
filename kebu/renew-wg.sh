@@ -55,6 +55,6 @@ echo ""
 echo " Wireguard Account Has Been Successfully Renewed"
 echo " ============================" | lolcat
 echo " Client Name : $user"
-echo " Expired  On: $exp4"
+echo " Expired  On : $exp4"
 echo " ============================" | lolcat
 echo " Script By SSH SEDANG NETWORK"
