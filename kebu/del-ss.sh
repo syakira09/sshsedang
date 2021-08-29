@@ -17,19 +17,18 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/shadowsocks-libev/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name : Delete Shadowsocks Account" | lolcat
-		echo ""
+		echo "Name : Delete Shadowsocks Account" 
+		echo "=================================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
-	echo " Name : Delete Shadowsocks Account" | lolcat
-	echo ""
+	echo " Name : Delete Shadowsocks Account" 
+	echo " ===============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo ""
 	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/etc/shadowsocks-libev/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
@@ -57,7 +56,8 @@ systemctl disable shadowsocks-libev-server@$user-tls.service
 	rm -f "/etc/shadowsocks-libev/$user-http.json"
 clear
 echo " SS OBFS Account Deleted Successfully"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK" 
