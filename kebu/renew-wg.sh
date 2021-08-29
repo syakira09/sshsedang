@@ -18,20 +18,19 @@ source /etc/wireguard/params
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name : Renew Wireguard Account" | lolcat	
-		echo ""		
+		echo "Name : Renew Wireguard Account"
+		echo "==============================" | lolcat	
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
-	echo "Name : Renew Wireguard Account" | lolcat	
-	echo ""		
+	echo "Name : Renew Wireguard Account"
+	echo "===============================" | lolcat	
 	echo "Select an existing client that you want to renew"
 	echo " Press CTRL+C to return"
-	echo ""	
-	echo -e "==============================="
+	echo -e "===============================" | lolcat	
 	echo "     No  Expired   User"
 	grep -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf" | cut -d ' ' -f 3-4 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -54,7 +53,8 @@ sed -i "s/### Client $user $exp/### Client $user $exp4/g" /etc/wireguard/wg0.con
 clear
 echo ""
 echo " Wireguard Account Has Been Successfully Renewed"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired  On: $exp4"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
