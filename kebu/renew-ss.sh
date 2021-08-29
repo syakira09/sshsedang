@@ -17,20 +17,19 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/shadowsocks-libev/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name : Renew Shadowsocks" | lolcat
-		echo ""
+		echo "Name : Renew Shadowsocks Account"
+		echo "=================================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
-	echo " Name : Renew Shadowsocks" | lolcat
-	echo ""
+	echo " Name : Renew Shadowsocks Account"
+	echo " =================================" | lolcat
 	echo " Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo ""
-	echo -e "===============================" | lolcat
+	echo -e " =================================" | lolcat
 	grep -E "^### " "/etc/shadowsocks-libev/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -52,7 +51,8 @@ sed -i "s/### $user $exp/### $user $exp4/g" /etc/shadowsocks-libev/akun.conf
 clear
 echo ""
 echo " SS OBFS Account Has Been Successfully Renewed"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
