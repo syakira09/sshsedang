@@ -19,9 +19,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user kibomaxis@gmail.com
-from kibomaxis@gmail.com
-password joysmart
+user anisakansa6@gmail.com
+from anisakansa6@gmail.com
+password zjnkmnhxyghykslg 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
