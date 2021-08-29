@@ -18,20 +18,19 @@ source /etc/wireguard/params
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name : Delete Wireguard Account" | lolcat
-		echo ""
+		echo "Name : Delete Wireguard Account"
+		echo "===============================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
-	echo "Name : Delete Wireguard Account" | lolcat
-	echo ""
+	echo "Name : Delete Wireguard Account"
+	echo " ===============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo ""
-	echo " ==============================="
+	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf" | cut -d ' ' -f 3-4 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -57,7 +56,8 @@ source /etc/wireguard/params
 	service cron restart
 clear
 echo " Wireguard Account Deleted Successfully" | lolcat
-echo " =========================="
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired  On : $exp"
-echo " =========================="
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
