@@ -13,7 +13,7 @@ echo "Only For Premium Users"
 exit 0
 fi
 apt install jq curl -y
-DOMAIN=ssha.xyz
+DOMAIN=sshss.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.sshss.my.id
 CF_ID=sshsedang@gmail.com
