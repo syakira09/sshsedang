@@ -10,6 +10,7 @@ echo -e "${green}Permission Accepted...${NC}"
 else
 echo -e "${red}Permission Denied!${NC}";
 echo "Only For Premium Users"
+echo "Whatsapp : 082311190332"
 exit 0
 fi
 clear
@@ -17,16 +18,16 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-pptp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name : Renew PPTP" | lolcat
-		echo ""
+		echo "Name : Renew PPTP Account"
+		echo "=========================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
-	echo "Name : Renew PPTP" | lolcat
-	echo ""
+	echo "Name : Renew Account"
+	echo "===============================" | lolcat
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
 	echo -e "===============================" | lolcat
@@ -55,3 +56,4 @@ echo " ==========================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
 echo " ==========================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
