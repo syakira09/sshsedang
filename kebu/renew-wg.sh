@@ -29,7 +29,7 @@ source /etc/wireguard/params
 	echo "Name : Renew Wireguard Account"
 	echo "===============================" | lolcat	
 	echo "Select an existing client that you want to renew"
-	echo " Press CTRL+C to return"
+	echo "Press CTRL+C to return"
 	echo -e "===============================" | lolcat	
 	echo "     No  Expired   User"
 	grep -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf" | cut -d ' ' -f 3-4 | nl -s ') '
