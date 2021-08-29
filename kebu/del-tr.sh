@@ -16,18 +16,17 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/trojan/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
-		echo "Name : Delete Trojan Account" | lolcat
-		echo ""
+		echo "Name : Delete Trojan Account" 
+		echo "==============================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	echo ""
-	echo "Name : Delete Trojan Account" | lolcat
-	echo ""
+	echo " Name : Delete Trojan Account" | lolcat
+	echo " ===============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo ""
 	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/etc/trojan/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
@@ -48,7 +47,8 @@ service cron restart
 clear
 clear
 echo " Trojan Account Deleted Successfully"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
