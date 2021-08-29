@@ -65,11 +65,11 @@ echo -e "WS Ovpn       : 2086"
 echo -e "Port Squid    :$sqd"
 echo -e "badvpn        : 7100-7300"
 echo -e "===============================" | lolcat
-echo -e "OpenVPN       : TCP $ovpn http://$IP:81/client-tcp-$ovpn.ovpn"
-echo -e "OpenVPN       : UDP $ovpn2 http://$IP:81/client-udp-$ovpn2.ovpn"
-echo -e "OpenVPN       : SSL 442 http://$IP:81/client-tcp-ssl.ovpn"
+echo -e "OpenVPN TCP   : $ovpn http://$IP:81/client-tcp-$ovpn.ovpn"
+echo -e "OpenVPN UDP   : $ovpn2 http://$IP:81/client-udp-$ovpn2.ovpn"
+echo -e "OpenVPN SSL   : 442 http://$IP:81/client-tcp-ssl.ovpn"
 echo -e "===============================" | lolcat
 echo -e "[PAYLOAD SSH WS]"
 echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "===============================" | lolcat
-echo -e "SCRIPT By SSH SEDANG"
+echo -e "Script By SSH SEDANG NETWORK"
