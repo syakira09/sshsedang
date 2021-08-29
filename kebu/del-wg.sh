@@ -26,7 +26,7 @@ source /etc/wireguard/params
 
 	clear
 	echo ""
-	echo "Name : Delete Wireguard Account"
+	echo " Name : Delete Wireguard Account"
 	echo " ===============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
