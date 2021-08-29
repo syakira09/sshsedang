@@ -18,7 +18,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/shadowsocksr/akun.conf")
 		clear
 		echo ""
 		echo "Name : Delete ShadowsocksR Account"
-		echo " =================================" | lolcat
+		echo "==================================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
@@ -29,7 +29,6 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/shadowsocksr/akun.conf")
 	echo " =================================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo ""
 	echo " =================================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/usr/local/shadowsocksr/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
@@ -55,7 +54,8 @@ service cron restart
 /etc/init.d/ssrmu restart
 clear
 echo " Shadowsocks-R Account Deleted Successfully"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK" | lolcat
