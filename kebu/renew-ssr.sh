@@ -17,7 +17,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/shadowsocksr/akun.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "Name : Renew ShadowsocksR" 
+		echo "Name : Renew ShadowsocksR Account" 
 		echo "=============================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
@@ -25,11 +25,10 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/shadowsocksr/akun.conf")
 
 	clear
 	echo ""
-	echo " Name : Renew ShadowsocksR"
+	echo " Name : Renew ShadowsocksR Account"
 	echo -e "===============================" | lolcat
 	echo " Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo ""
 	echo -e "===============================" | lolcat
 	grep -E "^### " "/usr/local/shadowsocksr/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -54,7 +53,8 @@ sed -i "s/### $user $exp/### $user $exp4/g" /usr/local/shadowsocksr/akun.conf
 clear
 echo ""
 echo " Shadowsocks-R Account Has Been Successfully Renewed"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
