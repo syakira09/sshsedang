@@ -389,8 +389,8 @@ wget -O add-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/me
 wget -O xp-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/xp-trgo.sh"
 wget -O cek-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/cek-trgo.sh"
 wget -O renew-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/renew-trgo.sh"
-wget -O port-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/port-trgo.sh"
-wget -O del-trgo "https://raw.githubusercontent.com/halluboys/xzvnct/main/update/del-trgo"
+wget -O port-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/port-trgo.sh"
+wget -O del-trgo "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/men/del-trgo.sh"
 
 chmod +x menu
 chmod +x l2tp
