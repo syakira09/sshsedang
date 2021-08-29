@@ -21,10 +21,11 @@ SERVER_PUB_IP=$(wget -qO- ifconfig.me/ip);
 else
 SERVER_PUB_IP=$IP
 fi
-	echo "Name : Create Wireguard Account" | lolcat
-	echo ""
+	echo "Name : Create Wireguard Account" 
+	echo "================================" | lolcat
 	echo "Tell me a name for the client."
 	echo "Use one word only, no special characters."
+	echo "================================" | lolcat
 
 	until [[ ${CLIENT_NAME} =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Client name: " -e CLIENT_NAME
