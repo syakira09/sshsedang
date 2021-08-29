@@ -19,15 +19,15 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user sosohoha573@gmail.com
-from sosohoha573@gmail.com
-password kyeshqqzxkubxviv
+user email xzvnct
+from email hammysayang@gmail.com
+password Windows7
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
 wget -O autobackup "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/hesoyam-oke/project/main/backup.sh"
+wget -O backup "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/backup.sh"
 wget -O bckp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/restore.sh"
 wget -O strt "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/strt.sh"
