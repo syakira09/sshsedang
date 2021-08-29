@@ -24,11 +24,10 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-l2tp")
 	fi
 
 	echo ""
-	echo " Name : Delete L2TP Account" | lolcat
-	echo ""
+	echo " Name : Delete L2TP Account"
+	echo " ===============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo ""
 	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/var/lib/premium-script/data-user-l2tp" | cut -d ' ' -f 2-3 | nl -s ') '
@@ -51,7 +50,8 @@ sed -i "/^### $VPN_USER $exp/d" /var/lib/premium-script/data-user-l2tp
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 clear
 echo " L2TP Account Has Been Successfully Deleted"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
 echo " Client Name : $VPN_USER"
 echo " Expired On  : $exp"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
