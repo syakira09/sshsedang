@@ -19,11 +19,11 @@ domain=$(cat /etc/v2ray/domain)
 else
 domain=$IP
 fi
-echo -e "Name : Create SSH & OpenVPN Account" | lolcat
-echo -e "===================================" | lolcat
+echo -e "Name : Create SSH , WebSocket, OpenVPN Account" | lolcat
+echo -e "=============================================" | lolcat
 read -p "Username : " Login
 read -p "Password : " Pass
-read -p "Expired (hari): " masaaktif
+read -p "Expired (day): " masaaktif
 
 IP=$(wget -qO- ifconfig.co);
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
@@ -63,11 +63,11 @@ echo -e "WS SSL        : 443"
 echo -e "WS Non SSL    : 2082"
 echo -e "WS Ovpn       : 2086"
 echo -e "Port Squid    :$sqd"
-echo -e "badvpn        : 7100-7300"
+echo -e "Badvpn Udpgw  : 7100-7300"
 echo -e "===============================" | lolcat
 echo -e "OpenVPN TCP   : $ovpn http://$IP:81/client-tcp-$ovpn.ovpn"
 echo -e "OpenVPN UDP   : $ovpn2 http://$IP:81/client-udp-$ovpn2.ovpn"
-echo -e "OpenVPN SSL   : 442 http://$IP:81/client-tcp-ssl.ovpn"
+echo -e "OpenVPN SSL   : 442  http://$IP:81/client-tcp-ssl.ovpn"
 echo -e "===============================" | lolcat
 echo -e "[PAYLOAD SSH WS]"
 echo -e "GET / HTTP/1.1[crlf]Host: $domain[crlf]Upgrade: websocket[crlf][crlf]"
