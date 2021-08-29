@@ -12,7 +12,9 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 clear
-echo "Starting Update ..." | lolcat
+echo "Starting Update" | lolcat
+echo "" | lolcat
+echo "................." | lolcat
 # update
 cd /usr/bin
 
@@ -187,9 +189,12 @@ chmod +x renew-wg
 
 sed -i -e 's/\r$//' add-l2tp
 
-echo " Successfully Update :"
+echo " Successfully Update :" | lolcat
 echo " - Fix minor Bugs"
-echo " Reboot 5 Sec"
+echo ""
+echo " Rebooting in 5 Sec"
+echo "" | lolcat
+echo " ................." | lolcat
 sleep 5
 rm -f update.sh
 reboot
