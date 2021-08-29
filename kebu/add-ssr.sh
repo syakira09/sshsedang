@@ -55,8 +55,10 @@ ssr_link="ssr://${tmp2}"
 service cron restart
 IP=$(wget -qO- ifconfig.me/ip);
 echo -e ""
-echo -e "Name : ShadowsocksR"
-clear && echo && echo "===================================================" && echo  | lolcat
+echo -e ""
+clear && echo && echo "" && echo  | lolcat
+echo -e " Name : ShadowsocksR" | lolcat
+echo -e " ===================================================" | lolcat
 echo -e " User [${ssr_user}] configuration info：" | lolcat
 echo -e " IP            : ${IP}"
 echo -e " Port          : ${ssr_port}"
