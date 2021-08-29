@@ -58,4 +58,4 @@ echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " ============================" | lolcat
-echo " Script By SSH SEDANG NETWORK" | lolcat
+echo " Script By SSH SEDANG NETWORK" 
