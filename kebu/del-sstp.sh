@@ -16,9 +16,9 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-sstp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
-		echo "Name : Delete SSTP Account" | lolcat
-		echo "=============================="
-		echo "You have no existing clients!" | lolcat
+		echo "Name : Delete SSTP Account" 
+		echo "=============================="| lolcat
+		echo "You have no existing clients!"
 		exit 1
 	fi
 
@@ -27,7 +27,6 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-sstp")
 	echo "==============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo ""
 	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/var/lib/premium-script/data-user-sstp" | cut -d ' ' -f 2-3 | nl -s ') '
@@ -45,7 +44,8 @@ sed -i "/^### $user $exp/d" /var/lib/premium-script/data-user-sstp
 sed -i '/^'"$user"'/d' /home/sstp/sstp_account
 clear
 echo " SSTP Account Has Been Successfully Deleted" | lolcat
-echo " =========================="
+echo " ============================"
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " ============================"
+echo " Script By SSH SEDANG NETWORK" 
