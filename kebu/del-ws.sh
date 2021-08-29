@@ -16,19 +16,18 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/v2ray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		echo ""
-		echo "Name : Delete V2RAY Account" | lolcat
-		echo ""
+		echo "Name : Delete V2RAY Account" 
+		echo "============================" | lolcat
 		echo "You have no existing clients!"
 		exit 1
 	fi
 
 	clear
 	echo ""
-	echo "Name : Delete V2RAY Account" | lolcat
-	echo ""
+	echo "Name : Delete V2RAY Account" 
+	echo " ===============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo ""
 	echo " ===============================" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/etc/v2ray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
@@ -52,3 +51,4 @@ echo " ==========================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " ==========================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
