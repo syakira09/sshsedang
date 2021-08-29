@@ -15,9 +15,9 @@ fi
 apt install jq curl -y
 DOMAIN=ssha.xyz
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.ssha.xyz
-CF_ID=admin@sshsedang.com
-CF_KEY=b6a15f71ddd2b9f8862b0170b0d61eb3cbdc4
+SUB_DOMAIN=${sub}.sshss.my.id
+CF_ID=sshsedang@gmail.com
+CF_KEY=eaeddbd9e3cf97d4b889bd7fbae56b60bba63
 set -euo pipefail
 IP=$(wget -qO- ifconfig.me/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
