@@ -24,7 +24,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-sstp")
 
 	echo ""
 	echo " Name : Delete SSTP Account"
-	echo "==============================" | lolcat
+	echo " ==============================" | lolcat
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
 	echo " ===============================" | lolcat
