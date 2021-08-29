@@ -16,9 +16,11 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/v2ray/vless.json")
 
 	clear
 	echo ""
+	echo "Name : Renew Vless Account"
+        echo "===============================" | lolcat
 	echo "Select the existing client you want to renew"
-	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo "Press CTRL+C to return"
+	echo -e "===============================" | lolcat
 	grep -E "^### " "/etc/v2ray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -42,7 +44,8 @@ service cron restart
 clear
 echo ""
 echo " VLESS Account Was Successfully Renewed"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " ==========================" | lolcat
+echo " ============================" | lolcat
+echo " Script By SSH SEDANG NETWORK"
