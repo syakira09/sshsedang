@@ -39,7 +39,6 @@ wget -O member "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu
 wget -O delete "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/delete.sh"
 wget -O cek "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/cek.sh"
 wget -O restart "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/speedtest_cli.py"
 wget -O info "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/info.sh"
 wget -O ram "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/renew.sh"
@@ -56,8 +55,6 @@ wget -O port-sstp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/k
 wget -O port-squid "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-squid.sh"
 wget -O port-ws "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-ws.sh"
 wget -O port-vless "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/xp.sh"
 wget -O swap "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/swapkvm.sh"
 wget -O user-limit "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/user-limit.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kebu/auto-reboot.sh"
@@ -123,7 +120,6 @@ chmod +x member
 chmod +x delete
 chmod +x cek
 chmod +x restart
-chmod +x speedtest
 chmod +x info
 chmod +x about
 chmod +x autokill
@@ -141,8 +137,6 @@ chmod +x port-tr
 chmod +x port-squid
 chmod +x port-ws
 chmod +x port-vless
-chmod +x wbmn
-chmod +x xp
 chmod +x swap
 chmod +x auto-reboot
 chmod +x running
