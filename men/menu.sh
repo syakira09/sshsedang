@@ -56,7 +56,7 @@ echo -e  " $gl ║\e[m$bd 4$bl]\e[m$bd Panel SSTP  Account"
 echo -e  " $bl ║\e[m$bd 5$bl]\e[m$bd Panel SSR & SS Account"
 echo -e  " $bl ║\e[m$bd 6$bl]\e[m$bd Panel V2Ray"
 echo -e  " $bl ║\e[m$bd 7$bl]\e[m$bd Panel VLess"
-echo -e  " $bl ║\e[m$bd 8$bl]\e[m$bd Panel TRojanGO"
+echo -e  " $bl ║\e[m$bd 8$bl]\e[m$bd Panel TRojanGO [CLOSED]"
 echo -e  " $bl ║\e[m$bd 9$bl]\e[m$bd Panel TrojanGFW                                         ╥"
 echo -e   "  \e[1;32m╠════════════════════════════════════════════════════════════╣\e[m" | lolcat
 echo -e   "  ║                       ┃SYSTEM MENU┃                        ║\e[m" | lolcat 
