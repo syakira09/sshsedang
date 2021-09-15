@@ -1,5 +1,5 @@
 # SSH SEDANG NETWORK
-About me
+Kami menjual akun/ssh vpn serta menyewakan juga script vps.
 
 # Script
 
