@@ -31,6 +31,7 @@ rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.i
 - V2RAY Vless TLS <br>
 - V2RAY Vless None TLS <br>
 - Trojan <br>
+- Backup & Restore <br>
 
 # OS Supported
 - Debian 9 & Debian 10 64-bit <br>
