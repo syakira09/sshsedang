@@ -42,9 +42,10 @@ rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.i
 - Telegram : t.me/sshsedang4 <br>
 
 # Payment
-<details>
-<summary>Click for Show Payment Qris</summary>
-<p align="center">
+##<details>
+#<summary>Click for Show Payment Qris</summary>
+#<p align="center">
 ![WhatsApp Image 2021-09-14 at 19 51 46](https://user-images.githubusercontent.com/89133643/133570031-e9c90130-06d6-4e35-b783-292681b6fad9.jpeg)
-</p>
-</details>
+#</p>
+
+#</details>
