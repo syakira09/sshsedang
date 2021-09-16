@@ -41,13 +41,10 @@ rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.i
 - Whatsapp : wa.me/6282311190332 <br>
 - Telegram : t.me/sshsedang4 <br>
 
-# Other
+# Payment
 <details>
 <summary>Click for Show Payment Qris</summary>
 <p align="center">
-![Monash UAS](https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/WhatsApp%20Image%202021-09-14%20at%2019.51.46.jpeg)
-  
-![Screenshot_20210827-201008](https://user-images.githubusercontent.com/87511503/131221061-4ccc16ba-5fbe-4f27-8a01-966d888682e5.jpg)
-
+![WhatsApp Image 2021-09-14 at 19 51 46](https://user-images.githubusercontent.com/89133643/133570031-e9c90130-06d6-4e35-b783-292681b6fad9.jpeg)
 </p>
 </details>
