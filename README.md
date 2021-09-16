@@ -43,7 +43,7 @@ rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.i
 
 # Other
 <details>
-<summary>Click for Show PaymentQris</summary>
+<summary>Click for Show Payment Qris</summary>
 <p align="center">
 ![Monash UAS](https://raw.githubusercontent.com/SSHSEDANG4/sshsedang/main/kota/WhatsApp%20Image%202021-09-14%20at%2019.51.46.jpeg)
 </p>
