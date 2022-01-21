@@ -5,7 +5,7 @@ Kami menjual akun/ssh vpn serta menyewakan juga script vps.
 
 Step 1 : <br>
 ```shell
-apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+rm -f setup.sh && apt update && apt install wget curl -y && wget -O setup.sh "https://ssn.my.id/script-ssn/setup.sh" && chmod +x setup.sh && ./setup.sh
 ```
 Step 2 : <br>
 ```shell
