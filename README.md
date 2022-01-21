@@ -5,11 +5,11 @@ Kami menjual akun/ssh vpn serta menyewakan juga script vps.
 
 Step 1 : <br>
 ```shell
-rm -f setup.sh && apt update && apt install wget curl -y && wget -O setup.sh "https://ssn.my.id/script-ssn/setup.sh" && chmod +x setup.sh && ./setup.sh
+apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
 Step 2 : <br>
 ```shell
-CLOSED
+rm -rf setup2.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils wget screen curl && apt update && apt install wget curl -y && wget -O setup.sh "https://ssn.my.id/script-ssn/setup.sh" && chmod +x setup.sh && ./setup.sh
 ```
 # List Service
 - OpenSSH <br>
