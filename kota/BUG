@@ -81,6 +81,10 @@ zoom.us => wss/ws/ssl
 ✎ MUSIK
 m.joox.co => wss/ws/ssl
 m.joox.com => wss/ws/ssl
+✎ OPOK
+dnstt
+maps.google.com sni (ssl) 100 ember/hari
+172.67.73.5 v2ray tls 20 ember/hari.
 
 ➠ XL
 ✎ EDUKASI
