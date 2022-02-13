@@ -11,6 +11,7 @@ udemy.com => wss/ws/ssl
 skillacademy.com => wss
 bimbel.ruangguru.com => wss/ws
 socks4://36.66.192.35:38420 => Proxy
+104.22.25.131:80
 104.22.25.131 => ws
 ✎ GAMEMAX
 104.19.143.108 => wss/ws
@@ -91,3 +92,19 @@ maps.google.com sni (ssl) 100 ember/hari
 udemy.com => wss/ws
 skillacademy.com => wss
 bimbel.ruangguru.com => wss/ws
+✎ AKRAB
+VERSI IPV4
+
+104.26.4.126
+104.26.4.10
+104.18.21.226
+
+Host : pointing
+
+akrab1.superssh.net
+akrab2.dnsmaker365.com
+akrab3.xfreenet.com
+
+VERSI IPV6
+
+::ffff:681a:40a
