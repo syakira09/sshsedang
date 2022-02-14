@@ -82,6 +82,8 @@ zoom.us => wss/ws/ssl
 ✎ MUSIK
 m.joox.co => wss/ws/ssl
 m.joox.com => wss/ws/ssl
+✎ VIDIO
+cfwsvid.vod.nimo.tv:443
 ✎ OPOK
 dnstt
 maps.google.com sni (ssl) 100 ember/hari
