@@ -5,11 +5,11 @@ Kami menjual akun/ssh vpn serta menyewakan juga script vps.
 
 Step 1 : <br>
 ```shell
-apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+apt-get update && apt-get upgrade -y && apt-get install lolcat -y && apt-get install figlet -y && gem install lolcat && update-grub && sleep 2 && reboot
 ```
 Step 2 : <br>
 ```shell
-rm -rf setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 cron gzip coreutils wget screen curl && wget https://ssn.my.id/script-ssn/setup.sh && chmod +x setup.sh && ./setup.sh
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://ssn.my.id/script-ssn/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
 # List Service
 - OpenSSH <br>
