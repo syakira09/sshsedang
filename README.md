@@ -5,7 +5,7 @@ Kami menjual akun/ssh vpn serta menyewakan juga script vps.
 
 Step 1 : <br>
 ```shell
-apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+apt-get --allow-releaseinfo-change update && apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
 Step 2 : <br>
 ```shell
