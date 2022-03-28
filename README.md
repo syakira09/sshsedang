@@ -32,6 +32,7 @@ rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ip
 - V2RAY Vless None TLS <br>
 - Trojan GFW <br>
 - Trojan GO <br>
+- Slowdns
 - GPRC
 - Backup & Restore <br>
 
