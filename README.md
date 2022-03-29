@@ -5,11 +5,15 @@ Kami menjual akun/ssh vpn serta menyewakan juga script vps.
 
 Step 1 : <br>
 ```shell
-apt-get --allow-releaseinfo-change update && apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+apt update && apt upgrade -y --fix-missing && update-grub && sleep 2 && reboot
+```
+Step 2 (Maintenance) :  <br>
+```shell
+rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt install -y bzip2 gzip coreutils screen curl && wget https://ssn.my.id/script-ssn/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
 Step 2 : <br>
 ```shell
-rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt install -y bzip2 gzip coreutils screen curl && wget https://ssn.my.id/script-ssn/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt install -y bzip2 gzip coreutils screen curl && wget https://ssn.my.id/script-ssn/setup2.sh && chmod +x setup2.sh && sed -i -e 's/\r$//' setup2.sh && screen -S setup2 ./setup2.sh
 ```
 # List Service
 - OpenSSH <br>
