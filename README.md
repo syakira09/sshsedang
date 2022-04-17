@@ -15,6 +15,10 @@ Step 2 : <br>
 ```shell
 rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt install lolcat -y && gem install lolcat && apt install toilet -y && apt install figlet -y && apt install -y bzip2 gzip coreutils screen curl && wget https://ssn.my.id/script-ssn/setup2.sh && chmod +x setup2.sh && sed -i -e 's/\r$//' setup2.sh && screen -S setup2 ./setup2.sh && rm -f setup2.sh
 ```
+Step 2 : (New)<br>
+```shell
+rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt install lolcat -y && gem install lolcat && apt install toilet -y && apt install figlet -y && apt install -y bzip2 gzip coreutils screen curl && wget https://ssn.my.id/script/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh && rm -f setup.sh
+```
 # List Service
 - OpenSSH <br>
 - OpenVPN <br>
